@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <h1>Help Support SPI With a Tax Deductible Donation</h1>
+
+    <section class="donation-form-section">
+        <button class="send-donation">SEND DONATION</button>
+    </section>
+
+    <section class="donation-about-section">
+        <h3>How will your contribution be used?</h3>
+        <div class="article-body">
+            {{post.content}}
+        </div>
+    </section>
+
+</article>
+
+{% endblock %}

@@ -1,0 +1,155 @@
+/******************************************************************
+Site Name: SPI
+Author: Civil Services
+
+Stylesheet: Main Stylesheet
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+
+/*********************
+IMPORTING UTILITIES
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "utilities/normalize";
+
+// Sass variables
+@import "utilities/variables";
+
+// Sass functions
+@import "utilities/functions";
+
+//import bourbon
+@import "utilities/bourbon/bourbon";
+
+// import mixins
+// @import "utilities/mixins";
+
+// the grid
+@import "utilities/grid";
+
+/*********************
+IMPORTING MODULES
+Modules are reusable blocks or elements we use throughout the project.
+*********************/
+
+// buttons
+@import "modules/buttons";
+
+// forms (inputs & labels)
+@import "modules/forms";
+
+//anchor tags and link styling
+@import "modules/links";
+
+/**
+ PARTIALS
+ Larger chunks of rules that are unique to specific pages or parts of a page e.g. headers, nav, post or page types, etc.
+*/
+@import "partials/body";
+
+//header and header tags
+@import "partials/header";
+
+//main menu styles
+@import "partials/nav";
+
+//generic and mostly re-usable post styles
+@import "partials/post";
+
+//pagination nav menus
+@import "partials/pagination";
+
+@import "partials/footer";
+
+// typography
+@import "utilities/typography";
+
+
+/**
+ TODO : Possibly use inline breakpoints in partials
+*/
+
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (min-width: 481px) {
+
+	// styles in 481up.scss
+	@import "breakpoints/481up";
+
+} // end of media query
+
+/*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 768px) {
+
+	// styles in 768up.scss
+	@import "breakpoints/768up";
+
+} // end of media query
+
+/*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 1030px) {
+
+	// styles in 1030up.scss
+	@import "breakpoints/1030up";
+
+} // end of media query
+
+/*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1240px) {
+
+	// styles in 1240up.scss
+	@import "breakpoints/1240up";
+
+} // end of media query
+
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+	// styles in 2x.scss
+	@import "breakpoints/2x";
+
+} // end of media query
+
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+
+	// styles in print.scss
+	@import "utilities/print";
+
+}

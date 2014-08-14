@@ -1,0 +1,26 @@
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+    color: $blue;
+
+    /* on hover */
+    &:hover, &:focus {
+        color: $blue;
+    }
+
+    /* on click */
+    &:active {
+    }
+
+    /* mobile tap color */
+    &:link {
+        /*
+        this highlights links on iPhones/iPads.
+        so it basically works like the :hover selector
+        for mobile devices.
+        */
+        -webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+    }
+}

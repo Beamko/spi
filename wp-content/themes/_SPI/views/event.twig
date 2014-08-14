@@ -1,0 +1,70 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="article-header">
+        <h5 class="category-pre-header">Past Event</h5>
+        <h1 class="page-title">{{post.title}}</h1>
+    </header>
+
+      <div class="event-details clearfix">
+
+          <section class="event-location-section">
+              <h4>Location</h4>
+              <p class="info-text"> {{post.get_field('location')}}</p>
+          </section>
+
+          <section class="event-schedule-section">
+              <h4>Date &amp; Time</h4>
+              <p class="info-text">{{start_date}} &mdash; {{end_date}}</p>
+          </section>
+
+          <section class="event-ticket-section">
+              <h4>Registration</h4>
+              <p class="info-text">
+              {% if post.free_event == 'No' %}
+                  {{post.ticket_cost}}<br/>
+              {% else %}
+                This is a Free Event<br/>
+              {% endif %}
+              {{post.ticket_info}}</p>
+          </section>
+
+        </div>
+
+        <section class="event-poster-section entry-content">
+          <img src="{{TimberImage(post.get_field('event_image')).src}}" />
+          <!--<img src="{{post.thumbnail.src}}" />-->
+        </section>
+
+        <section class="event-content-main entry-content" itemprop="articleBody">
+            <h2>Event Description</h2>
+            <div>{{post.content}}</div>
+        </section>
+
+        {% if post.get_field('event_schedule') %}
+        <section class="event-schedule-section entry-content">
+            <h4>Schedule</h4>
+            <div>{{post.get_field('event_schedule')}}</div>
+        </section>
+        {% endif %}
+
+        {% if post.get_field('moderator') %}
+        <section class="event-moderator-section entry-content">
+            <h4>Moderator</h4>
+            <div>{{post.get_field('moderator')}}</div>
+        </section>
+        {% endif %}
+
+        {% if post.get_field('sponsorship') %}
+        <section class="event-sponsorship-section entry-content">
+            <h4>Sponsorship</h4>
+            <div>{{post.get_field('sponsorship')}}</div>
+        </section>
+        {% endif %}
+
+
+</article>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block submenu %}
+    {% include 'projects-nav.twig' %}
+{% endblock %}
+
+{% block content %}
+
+<article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="article-header">
+        <h1 class="page-title">{{post.title}}</h1>
+    </header>
+
+    <section class="projects-overview">
+        <h2>Overview</h2>
+        <div>{{post.get_field('overview')}}</div>
+    </section>
+
+    <section class="project-sections">
+        {% for project_section  in project_sections %}
+            {% include "project-section.twig" with { post : project_section} %}
+        {% endfor %}
+    </section>
+
+</article>
+
+{% endblock %}

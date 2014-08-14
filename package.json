@@ -1,0 +1,11 @@
+{
+  "name": "SPI",
+  "description": "SPI",
+  "devDependencies": {
+    "grunt-contrib-watch": "latest",
+    "grunt-growl": "~0.1.5",
+    "matchdep": "~0.3.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-sass": "~0.7.3"
+  }
+}

@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="article-header">
+
+        <h1 class="page-title">{{post.title}}</h1>
+
+        <div class="subnav">
+            {% include 'about-nav.twig' %}
+        </div>
+
+
+    </header>
+
+
+    <section class="primary-about-sections entry-content cf" itemprop="articleBody">
+        {% for about_section in about_sections %}
+            {% include "about-section.twig" with { post : about_section} %}
+        {% endfor %}
+    </section>
+
+    <section class="director-about-section entry-content">
+        {% for director in directors %}
+            {% include "about-section.twig" with { post : director } %}
+        {% endfor %}
+    </section>
+
+     <section class="member-about-section entry-content">
+        {% for member in members %}
+            {% include "about-section.twig" with { post : member } %}
+        {% endfor %}
+    </section>
+
+</article>
+
+{% endblock %}

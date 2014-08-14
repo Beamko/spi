@@ -1,0 +1,7 @@
+ <ul class="nav about-nav cf">
+    {% for item in about_menu.items %}
+    <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
+        <a href="{{item.link}}">{{item.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
