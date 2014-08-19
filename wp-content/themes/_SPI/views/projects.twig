@@ -1,15 +1,16 @@
 {% extends "base.twig" %}
 
-{% block submenu %}
-    {% include 'projects-nav.twig' %}
-{% endblock %}
-
 {% block content %}
 
 <article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="article-header">
-        <h1 class="page-title">{{post.title}}</h1>
+    <header class="article-header row">
+        <h1 class="page-title large-5 column large-centered small-centered">{{post.title}}</h1>
+
+        <div class="subnav">
+            {% include 'projects-nav.twig' %}
+        </div>
+
     </header>
 
     <section class="projects-overview">
