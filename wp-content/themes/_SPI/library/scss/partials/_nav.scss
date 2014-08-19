@@ -11,126 +11,88 @@ and more scalable.
 */
 
 .nav {
-    border-bottom: 0;
-    margin: 0;
-    text-align: center;
-    text-indent: none;
-    background: $page;
-    //display: inline;
+  margin: 0;
 
-    li {
-      display: inline-block;
-      padding: 0 0.25em;
-      line-height: 1.5em;
+  text-align: center;
+  text-indent: none;
 
+  border-bottom: 0;
+  background: $page;
+  li {
+    line-height: 1.5em;
+    display: inline-block;
+    padding: 0 .25em;
+    a {
+      display: inline;
+      text-decoration: none;
+      color: $blue;
+      /*
+      remember this is for mobile ONLY, so there's no need
+      to even declare hover styles here, you can do it in
+      the style.scss file where it's relevant. We want to
+      keep this file as small as possible!
+      */
+    }
+    /*
+    so you really have to rethink your dropdowns for mobile.
+    you don't want to have it expand too much because the
+    screen is so small. How you manage your menu should
+    depend on the project. Here's some great info on it:
+    http://www.alistapart.com/articles/organizing-mobile/
+    */
+    ul.sub-menu,
+    ul.children {
+      li {
         a {
-            display: inline;
-            color: $blue;
-            text-decoration: none;
-
-            /*
-            remember this is for mobile ONLY, so there's no need
-            to even declare hover styles here, you can do it in
-            the style.scss file where it's relevant. We want to
-            keep this file as small as possible!
-            */
-            &:hover, &:focus {
-
-            }
+          padding-left: 30px;
         }
-
-        &:first-child {}
-
-        &:last-child {}
-
-        /*
-        so you really have to rethink your dropdowns for mobile.
-        you don't want to have it expand too much because the
-        screen is so small. How you manage your menu should
-        depend on the project. Here's some great info on it:
-        http://www.alistapart.com/articles/organizing-mobile/
-        */
-
-        ul.sub-menu,
-        ul.children {
-
-            li {
-
-                a {
-                    padding-left: 30px;
-
-                    &:hover,
-                    &:focus {}
-
-                    &:link {}
-
-                }
-
-                &:first-child {}
-
-                &:last-child {}
-
-            }
-
-        }
-
-    } /* end .menu li */
-
-    /* highlight current page */
-    li.current-menu-item,
-    li.current_page_item,
-    li.current-page-ancestor {
-
-        a {}
-
-    }  /* end current highlighters */
-
+      }
+    }
+  } /* end .menu li */
+  /* highlight current page */
+  /* end current highlighters */
 } /* end .nav */
 
 
 .top-nav {
-
   position: fixed;
-  width: 100%;
   z-index: 999;
+  top: 0;
   display: block;
+  width: 100%;
   background: transparent;
-
   li#about-item,
   li#projects-item,
   li#events-item,
-  li#search-item {display:none;}
-
-  li#home-item {
-    text-align: center;
-    width: 100%;
-    text-indent: 999px;
-    overflow: hidden;
-    background: transparent url("http://kodit.co/img/spi-logo.gif") no-repeat center 12px;
-    background-size: 30px 30px;
-    min-height: 40px;
-
+  li#search-item {
+    display: none;
   }
-
+  li#home-item {
+    overflow: hidden;
+    width: 100%;
+    min-height: 40px;
+    text-align: center;
+    text-indent: 999px;
+    background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 12px;
+    background-size: 30px 30px;
+  }
   li {
     display: block;
     float: none;
     width: 20%;
     a {
-        display: block;
-        padding: .75em 2em;
-        float: none;
+      display: block;
+      float: none;
+      padding: .75em 2em;
     }
   }
-
 }
 
 .subnav {
-
-  border-top: solid 1px $blue;
   margin-top: 2em;
-  padding-top:.75em;
-
-  li{margin: 0 1em;}
-
+  padding-top: .75em;
+  border-top: solid 1px $blue;
+  li {
+    margin: 0 1em;
+  }
 }
