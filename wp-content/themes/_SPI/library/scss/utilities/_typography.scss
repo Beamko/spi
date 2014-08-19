@@ -86,6 +86,8 @@ p {
 
 .article-content p,
 .entry-content p {
+  max-width:         830px;
+  margin: 0 auto;
   text-indent:       2em;
   text-align:        left;
 }
