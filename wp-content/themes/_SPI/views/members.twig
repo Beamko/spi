@@ -1,0 +1,20 @@
+<div class="large-4 small-6 column">
+    <div class="member-section">
+        <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+            <section class="article-content">
+                <h2 class="article-h1">
+                    {{post.title}}
+                </h2>
+
+                <img src="{{post.get_field('headshot')}}" alt="{{post.title}}">  
+
+                <h3>{{post.get_field('position')}}</h3>
+
+                <p>{{post.get_field('email')}}</p>          
+                
+
+            </section>
+
+        </article>
+    </div>
+</div>
