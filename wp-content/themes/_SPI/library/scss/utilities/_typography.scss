@@ -63,13 +63,13 @@ $info:              "franklin-gothic-urw", $sans-serif;
 
 
 body {
-    font-family: $copy;
-    font-size: 100%;
-    line-height: 1.5;
-    color: $blue;
-    text-align: center;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+  font-family: $copy;
+  font-size: 100%;
+  line-height: 1.5;
+  color: $blue;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 
@@ -86,10 +86,15 @@ p {
 
 .article-content p,
 .entry-content p {
-  max-width:         830px;
-  margin: 0 auto;
   text-indent:       2em;
   text-align:        left;
+}
+
+.article-content p,
+.entry-content p,
+.projects-overview p {
+  max-width:         830px;
+  margin:            0 auto;
 }
 
 h1, .h1 {

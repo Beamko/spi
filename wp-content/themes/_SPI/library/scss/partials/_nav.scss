@@ -61,6 +61,10 @@ and more scalable.
   display: block;
   width: 100%;
   background: transparent;
+  ul:first-of-type {
+    margin: 0 auto;
+    max-width: 1095px;
+  }
   li#about-item,
   li#projects-item,
   li#events-item,
