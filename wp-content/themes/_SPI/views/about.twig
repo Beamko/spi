@@ -6,9 +6,9 @@
 
     <header class="article-header row">
 
-        <h1 class="page-title large-7 column large-centered small-centered">{{post.page_title}}</h1>
+        <h1 class="page-title large-6 column large-centered small-centered">{{post.page_title}}</h1>
 
-        <div class="subnav">
+        <div id="subnav" class="subnav">
             {% include 'about-nav.twig' %}
         </div>
 
@@ -22,13 +22,18 @@
         {% endfor %}
     </section>
 
-    <section class="director-about-section entry-content row">
+    <section class="director-about-section row">
+        <h2 class="article-h1"></h2>
+        <div class="article-body">
+            <p></p>
+        </div>
         {% for director in directors %}
             {% include "members.twig" with { post : director } %}
         {% endfor %}
     </section>
 
-     <section class="member-about-section entry-content row">
+     <section class="member-about-section row">
+        <h2 class="article-h1">Members</h2>
         {% for member in members %}
             {% include "members.twig" with { post : member } %}
         {% endfor %}

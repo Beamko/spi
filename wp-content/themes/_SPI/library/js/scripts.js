@@ -114,4 +114,20 @@ jQuery(document).ready(function($) {
   loadGravatars();
 
 
+  var spi = {};
+
+  spi.init = function () {
+    spi.stickyNav();
+  }
+
+  spi.stickyNav = function () {
+    var useStickyNav = ($('html').hasClass('touch') && $(window).width >=768) ? false : true;
+
+    if (useStickyNav) {
+      $('#subnav').sticky({ topSpacing: 70, getWidthFrom: '.article-header', responsiveWidth: true, className: 'subnav-sticky' })
+    }
+  }
+
+  $(function () { spi.init(); });
+
 }); /* end of as page load scripts */

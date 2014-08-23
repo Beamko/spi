@@ -63,7 +63,7 @@ and more scalable.
   background: transparent;
   ul:first-of-type {
     margin: 0 auto;
-    max-width: 1095px;
+    max-width: 1280px;
   }
   li#about-item,
   li#projects-item,
@@ -93,10 +93,16 @@ and more scalable.
 }
 
 .subnav {
-  margin-top: 2em;
-  padding-top: .75em;
+  z-index: 200;
+  width: 100%;
+  max-width: 1192px;
+  margin-top: 0 !important;
+  padding: .75em 0;
   border-top: solid 1px $blue;
+  background-color: $page;
   li {
     margin: 0 1em;
   }
 }
+
+
