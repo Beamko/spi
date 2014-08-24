@@ -1,0 +1,137 @@
+/*
+-------------------------------------------------------------
+  F O O T E R
+------------------------------------------------------------- */
+
+.footer, #footer {
+  clear: both;
+  background-color: $page;
+  color: $blue;
+  margin-top: 3em;
+  text-align: center;
+
+  .footer-blocks{
+    margin-bottom: 2em;
+    .footer-block {
+      width: 100%;
+      float: left;
+      border-left: none;
+      height: 130px;
+      text-indent: 0 !important;
+      padding: 0 1em;
+
+      nav {
+        //float: left;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        .footer-location ul li {
+          color: #808080;
+          display:inline-block;
+        }
+      }
+
+
+    }
+    #contact-info {
+      border-left: none;
+      text-align: center;
+    }
+    #news-signup form{
+      margin-top: -8px;
+
+       input {
+        background: $page;
+        border: none;
+        border-bottom: solid 1px $blue;
+        border-radius: 0;
+        text-align: center;
+
+      }
+      input[type="submit"] {
+        border: solid 1px $blue;
+        padding: 6px 20px 3px 20px;
+        &:hover {
+          text-decoration: none;
+          color: white;
+          background: $blue;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 481px) { /* Larger Mobile Devices */
+  .footer, #footer {
+    clear: both;
+    background-color: $page;
+    color: $blue;
+    margin-top: 6em;
+    text-align: center;
+
+    .footer-blocks{
+      margin-bottom: 4em;
+      .footer-block {
+        width: 50%;
+        float: left;
+        height: 195px;
+        border-left: solid 1px $blue;
+      }
+      #social-links {
+        border-left: none;
+      }
+      #contact-info {
+        border-left: none;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+
+}
+
+@media only screen and (min-width: 1030px) { /* Desktop */
+  .footer, #footer {
+    margin-top: 6em;
+    .footer-blocks{
+      margin-bottom: 4em;
+      .footer-block {
+        width: 25%;
+        float: left;
+        height: 195px;
+        //border-left: none;
+      }
+      #social-links {
+        border-left: solid 1px $blue;
+        padding: 0 2em;
+      }
+      #site-contents{
+        padding: 0 2em;
+      }
+
+    }
+  }
+}
+
+@media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
+  .footer, #footer {
+    margin-top: 6em;
+
+    .footer-blocks{
+      margin-bottom: 4em;
+      .footer-block {
+        width: 25%;
+        float: left;
+        height: 195px;
+        //border-left: none;
+      }
+
+      #social-links,  #site-contents {
+        padding: 0 3em;
+      }
+    }
+  }
+}

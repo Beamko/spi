@@ -1,0 +1,61 @@
+/*
+-------------------------------------------------------------
+  E V E N T S
+------------------------------------------------------------- */
+
+.event-details .info-text{
+  text-align: center;
+}
+
+.event-poster-section{
+  margin-top: 5em;
+  img {
+    width: 55%;
+    max-width: 55%;
+    // TODO SPI
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 255, 0.15);
+    -moz-box-shadow:    0px 0px 7px 0px rgba(0, 0, 255, 0.15);
+    box-shadow:         0px 0px 7px 0px rgba(0, 0, 255, 0.15);
+  }
+}
+
+
+@media only screen and (min-width: 481px) { /* Larger Mobile Devices */
+
+}
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+	.event-details {
+		//border-top: 1px solid $blue;
+	}
+
+	.event-details section{
+		margin-top: 5em;
+		width: 33.33%;
+		float: left;
+		padding: 0 1.5em;
+		border-left: 1px solid $blue;
+		min-height: 210px;
+
+	}
+
+	.event-details section.event-location-section {
+		border: none;
+	}
+}
+
+@media only screen and (min-width: 1030px) { /* Desktop */
+
+	.event-details section {
+	  padding: 0 3.5em;
+	  min-height: 160px;
+	}
+
+}
+
+@media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
+	.event-details section {
+	  padding: 0 3.5em;
+	  min-height: 100px;
+	}
+}

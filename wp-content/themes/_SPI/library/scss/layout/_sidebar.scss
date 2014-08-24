@@ -1,49 +1,48 @@
 /*
 -------------------------------------------------------------
-  M E M B E R S
+  S I D E B A R S   &   A S I D E S
 ------------------------------------------------------------- */
-.member-section {
-	.headshot {
-		max-width: 246px;
-		width: 100%;
-		margin-bottom: 1.2em;
-	}
-	.email	{
-		text-transform: uppercase;
-		word-wrap: break-word;
-	}
-}
-
 
 @media only screen and (min-width: 481px) { /* Larger Mobile Devices */
 
 }
 
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
-	.member-section {
-		.headshot {
-			margin: 3em auto 1.2em;
-			padding: 0;
-		}
-		h4,
-		h5 {
-			margin-bottom: 0.2em;
-			font-size: 30px;
-		}
-		h6 {
-			font-size: 20px;
+	.sidebar {
+		margin-top: 2.2em;
+	}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
 		}
 	}
 }
 
 @media only screen and (min-width: 1030px) { /* Desktop */
-	.headshot {
-	  padding: 0 40px;
-	}
+
 }
 
 @media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
-	.headshot {
-	  padding: 0 60px;
-	}
+
 }
