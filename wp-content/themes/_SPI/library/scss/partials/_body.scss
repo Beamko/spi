@@ -66,6 +66,19 @@ LAYOUT & GRID STYLES
   margin-bottom: .25em;
 }
 
+.about-section {
+  [class*="column"]+[class*="column"]:last-child {
+    float: left;
+  }
+}
+
+.article-sub-section {
+  .headshot {
+    margin-top: 1.75em;
+  }
+
+}
+
 
 
 

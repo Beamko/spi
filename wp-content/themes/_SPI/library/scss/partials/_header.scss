@@ -19,27 +19,31 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 HEADER STYLES
 *********************/
 
-.header {
-    // background-color: $black;
-
-    text-align: center;
-    #inner-header {
-      padding: 0;
-      margin: 0 auto;
-      text-align: center;
-      display: inline;
-      position: absolute;
-      left:0;
-      top:0;
-      width: 100%;
-
-    }
+.about-section {
+  margin-bottom: 1.8em;
 }
 
-    #logo {
-        margin: 0.75em 0;
+.header {
+  // background-color: $black;
 
-        a {
-            color: $blue;
-        }
-    }
+  text-align: center;
+  #inner-header {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    display: inline;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+
+  }
+}
+
+#logo {
+  margin: 0.75em 0;
+
+  a {
+    color: $blue;
+  }
+}

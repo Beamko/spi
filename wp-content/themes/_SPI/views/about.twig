@@ -22,21 +22,40 @@
         {% endfor %}
     </section>
 
-    <section class="director-about-section row">
-        <h2 class="article-h1"></h2>
-        <div class="article-body">
-            <p></p>
+    <section class="director-about-section about-section row">
+        <div class="article-content">
+            <h2 class="article-h1">{{post.directors_section_title}}</h2>
+            <div class="article-body">
+                <p>{{post.directors_intro_content}}</p>
+            </div>
         </div>
+        <div class="article-sub-section">
         {% for director in directors %}
             {% include "members.twig" with { post : director } %}
-        {% endfor %}
+        {% endfor %} 
+        </div>
+
     </section>
 
-     <section class="member-about-section row">
-        <h2 class="article-h1">Members</h2>
-        {% for member in members %}
-            {% include "members.twig" with { post : member } %}
-        {% endfor %}
+     <section class="member-about-section about-section row">
+        <div class="article-content">
+            <h2 class="article-h1">{{post.members_section_title}}</h2>
+            <div class="article-body">
+                <p>{{post.members_intro_content}}</p>
+            </div>
+        </div>
+        <div class="article-sub-section">
+            {% for member in members %}
+                {% set memberPosition = '' %}
+                {% if loop.length % 3 == 2 and loop.index == loop.length - 1 %}
+                {% set memberPosition = 'large-offset-2' %}
+                {% endif %}
+                {% if loop.length % 3 == 1 and loop.index == loop.length %}
+                {% set memberPosition = 'large-offset-4 ' %}
+                {% endif %}
+                {% include "members.twig" with { post : member, memberPosition: memberPosition } %}
+            {% endfor %}
+        </div>
     </section>
 
 </article>

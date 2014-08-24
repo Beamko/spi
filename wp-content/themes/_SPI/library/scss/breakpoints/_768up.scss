@@ -34,8 +34,18 @@ LAYOUT & GRID STYLES
 	margin-bottom: 2em;
 }
 
-.primary-about-sections {
+.article-header {
+  margin-bottom: 4em;
+}
 
+.about-section {
+  margin-bottom: 3.5em;
+}
+
+.article-sub-section {
+	.headshot {
+		margin-top: 3em;
+	}
 }
 
 .event-details {
@@ -113,9 +123,21 @@ NAVIGATION STYLES
 /*********************
 MEMBERS
 *********************/
-.headshot {
-	padding: 0 30px;
+.member-section {
+	.headshot {
+		margin-bottom: 1.2em;
+		padding: 0 30px;
+	}
+	h4,
+	h5 {
+		margin-bottom: 0.2em;
+		font-size: 30px;
+	}
+	h6 {
+		font-size: 20px;
+	}
 }
+
 
 
 

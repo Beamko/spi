@@ -114,17 +114,24 @@ jQuery(document).ready(function($) {
   loadGravatars();
 
 
-  var spi = {};
+  var spi = {},
+      stickyNavLoaded = false;
 
   spi.init = function () {
     spi.stickyNav();
+    $(window).on("resize", spi.stickyNav);
   }
 
   spi.stickyNav = function () {
-    var useStickyNav = ($('html').hasClass('touch') && $(window).width >=768) ? false : true;
 
-    if (useStickyNav) {
-      $('#subnav').sticky({ topSpacing: 70, getWidthFrom: '.article-header', responsiveWidth: true, className: 'subnav-sticky' })
+    var useStickyNav = ($('html').hasClass('touch') && $(window).width >=768) || Modernizr.mq('only all and (max-width: 768px)') ? false : true;
+
+    if (useStickyNav && !stickyNavLoaded) {
+      $('#subnav').sticky({ topSpacing: 70, getWidthFrom: '.article-header', responsiveWidth: true, className: 'subnav-sticky' });
+      stickyNavLoaded = true;
+    } else if (!useStickyNav && stickyNavLoaded) {
+      $('#subnav').unstick();
+      stickyNavLoaded = false;
     }
   }
 

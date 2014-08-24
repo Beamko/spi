@@ -1,17 +1,17 @@
-<div class="large-4 small-6 column">
+<div class="large-4 small-6 column {{memberPosition}}">
     <div class="member-section">
         <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
             <section class="single-member">
 
                 <img class="headshot" src="{{post.get_field('headshot')}}" alt="{{post.title}}">  
 
-                <h2>
+                <h4>
                     {{post.title}}
-                </h2>
+                </h4>
 
-                <h3>{{post.get_field('position')}}</h3>
+                <h5>{{post.get_field('position')}}</h5>
 
-                <p>{{post.get_field('email')}}</p>          
+                <h6 class="email">{{post.get_field('email')}}</h6>          
                 
 
             </section>
