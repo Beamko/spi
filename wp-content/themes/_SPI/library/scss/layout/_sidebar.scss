@@ -1,0 +1,48 @@
+/*
+-------------------------------------------------------------
+  S I D E B A R S   &   A S I D E S
+------------------------------------------------------------- */
+
+@media only screen and (min-width: 481px) { /* Larger Mobile Devices */
+
+}
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+	.sidebar {
+		margin-top: 2.2em;
+	}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1030px) { /* Desktop */
+
+}
+
+@media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
+
+}

@@ -1,0 +1,286 @@
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {
+    margin-top: 1.5em;
+}
+
+.hentry {
+    background-color: $page;
+    border-radius: 3px;
+    margin-bottom: 1.5em;
+    //border: 1px solid $border-color;
+
+    header {
+        // border-bottom: 1px solid $light-gray;
+        //padding: 1.5em;
+    }
+
+    footer {
+        padding: 1.5em;
+        // border-top: 1px solid $light-gray;
+
+        p {
+            margin: 0;
+        }
+    }
+
+} /* end .hentry */
+
+.single-title,
+.page-title,
+.entry-title {
+    //margin: 0;
+}
+
+.single-title {}
+
+.page-title {}
+
+.entry-title {}
+
+.archive-title {}
+
+/* want to style individual post classes? Booya! */
+.post-id {}         /* post by id (i.e. post-3) */
+.post {}            /* general post style */
+.page {}            /* general article on a page style */
+.attachment {}      /* general style on an attatchment */
+.sticky {}          /* sticky post style */
+.hentry {}          /* hentry class */
+.category-slug {}   /* style by category (i.e. category-videos) */
+.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+/* post meta */
+.byline {
+    color: $blue;
+    font-style: italic;
+    margin: 0;
+
+    time {}
+}
+
+/* entry content */
+.entry-content {
+  //padding: 1.5em 1.5em 0;
+
+  p {
+      //margin: 0 0 1.5em;
+  }
+
+
+  ul, ol, table, dl {}
+
+  ul, ol {
+
+      li {}
+
+  }
+
+  ul {
+
+      li {}
+
+  }
+
+  ol {
+
+      li {}
+
+  }
+
+  table {
+      width: 100%;
+      border: 1px solid $blue;
+      margin-bottom: 1.5em;
+
+      caption {
+          margin: 0 0 7px;
+          font-size: 0.75em;
+          color: $blue;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+      }
+  }
+
+  tr {
+      border-bottom: 1px solid $blue;
+
+      &:nth-child(even) {
+          background-color: $blue;
+      }
+  }
+
+  td {
+      padding: 7px;
+      border-right: 1px solid $blue;
+
+      &:last-child {
+          border-right: 0;
+      }
+  }
+
+  th {
+    background-color: $blue;
+    border-bottom: 1px solid $blue;
+    border-right: 1px solid $blue;
+
+    &:last-child {
+        border-right: 0;
+    }
+  }
+
+  blockquote {
+    margin: 0 0 1.5em 0.75em;
+    padding: 0 0 0 0.75em;
+    border-left: 3px solid $blue;
+    font-style: italic;
+    color: $blue;
+
+    &:before {}
+
+  }
+
+  dl {}
+
+  dt {}
+
+  dd {
+    margin-left: 0;
+    font-size: 0.9em;
+    color: #787878;
+    margin-bottom: 1.5em;
+  }
+
+  img {
+    margin: 0 0 1.5em 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /*
+  image alignment on a screen this size may be
+  a bit difficult. It's set to start aligning
+  and floating images at the next breakpoint,
+  but it's up to you. Feel free to change it up.
+  */
+  .alignleft, img.alignleft {}
+  .alignright, img.alignright {}
+  .aligncenter, img.aligncenter {}
+
+  .size-auto,
+  .size-full,
+  .size-large,
+  .size-medium,
+  .size-thumbnail {
+      max-width: 100%;
+      height: auto;
+  }
+
+  pre {
+    background: $black;
+    color: $blue;
+    font-size: 0.9em;
+    padding: 1.5em;
+    margin: 0 0 1.5em;
+    border-radius: 3px;
+  }
+
+} /* end .entry-content */
+
+.wp-caption {
+  display: inline-block;
+  max-width: 100%;
+  padding: 5px;
+
+  /* images inside wp-caption */
+  img {
+    max-width: 100%;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  p.wp-caption-text {
+    font-size: 0.85em;
+    margin: 4px 0 7px;
+    text-align: center;
+  }
+
+} /* end .wp-caption */
+
+/* image gallery styles */
+.gallery {
+
+    dl {
+
+        a {}
+
+        img {}
+
+    }
+
+    dt {}
+
+    dd {}
+
+} /* end .gallery */
+
+/* gallery caption styles */
+.gallery-caption {}
+
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+
+// the tag output
+.tags {
+  margin: 0;
+}
+
+
+
+@media only screen and (min-width: 481px) { /* Larger Mobile Devices */
+  /* entry content */
+  .entry-content {
+
+
+    /* at this larger size, we can start to align images */
+    .alignleft, img.alignleft {
+      margin-right: 1.5em;
+      display: inline;
+      float: left;
+    }
+    .alignright, img.alignright {
+      margin-left: 1.5em;
+      display: inline;
+      float: right;
+    }
+    .aligncenter, img.aligncenter {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      clear: both;
+    }
+
+  } /* end .entry-content */
+}
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+  .article-header {
+    margin-bottom: 4em;
+  }
+
+  .about-section {
+    margin-bottom: 3.5em;
+  }
+}
+
+@media only screen and (min-width: 1030px) { /* Desktop */
+
+}
+
+@media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
+
+}

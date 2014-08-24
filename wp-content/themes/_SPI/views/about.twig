@@ -6,9 +6,9 @@
 
     <header class="article-header row">
 
-        <h1 class="page-title large-5 column large-centered small-centered">{{post.title}}</h1>
+        <h1 class="page-title large-6 column large-centered small-centered">{{post.page_title}}</h1>
 
-        <div class="subnav">
+        <div id="subnav" class="subnav">
             {% include 'about-nav.twig' %}
         </div>
 
@@ -22,16 +22,40 @@
         {% endfor %}
     </section>
 
-    <section class="director-about-section entry-content">
+    <section class="director-about-section about-section row">
+        <div class="article-content">
+            <h2 class="article-h1">{{post.directors_section_title}}</h2>
+            <div class="article-body">
+                <p>{{post.directors_intro_content}}</p>
+            </div>
+        </div>
+        <div class="article-sub-section">
         {% for director in directors %}
-            {% include "about-section.twig" with { post : director } %}
-        {% endfor %}
+            {% include "members.twig" with { post : director } %}
+        {% endfor %} 
+        </div>
+
     </section>
 
-     <section class="member-about-section entry-content">
-        {% for member in members %}
-            {% include "about-section.twig" with { post : member } %}
-        {% endfor %}
+     <section class="member-about-section about-section row">
+        <div class="article-content">
+            <h2 class="article-h1">{{post.members_section_title}}</h2>
+            <div class="article-body">
+                <p>{{post.members_intro_content}}</p>
+            </div>
+        </div>
+        <div class="article-sub-section">
+            {% for member in members %}
+                {% set memberPosition = '' %}
+                {% if loop.length % 3 == 2 and loop.index == loop.length - 1 %}
+                {% set memberPosition = 'large-offset-2' %}
+                {% endif %}
+                {% if loop.length % 3 == 1 and loop.index == loop.length %}
+                {% set memberPosition = 'large-offset-4 ' %}
+                {% endif %}
+                {% include "members.twig" with { post : member, memberPosition: memberPosition } %}
+            {% endfor %}
+        </div>
     </section>
 
 </article>
