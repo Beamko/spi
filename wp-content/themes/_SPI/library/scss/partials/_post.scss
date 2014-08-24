@@ -190,8 +190,8 @@ POSTS & CONTENT STYLES
 } /* end .entry-content */
 
 .wp-caption {
+  display: inline-block;
   max-width: 100%;
-  background: #eee;
   padding: 5px;
 
   /* images inside wp-caption */

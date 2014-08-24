@@ -42,12 +42,6 @@ LAYOUT & GRID STYLES
   margin-bottom: 3.5em;
 }
 
-.article-sub-section {
-	.headshot {
-		margin-top: 3em;
-	}
-}
-
 .event-details {
 	//border-top: 1px solid $blue;
 }
@@ -125,8 +119,8 @@ MEMBERS
 *********************/
 .member-section {
 	.headshot {
-		margin-bottom: 1.2em;
-		padding: 0 30px;
+		margin: 3em auto 1.2em;
+		padding: 0;
 	}
 	h4,
 	h5 {
