@@ -1,21 +1,20 @@
-/*********************
-NAVIGATION STYLES
-*********************/
-
 /*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
+-------------------------------------------------------------
+  N A V I G A T I O N
+------------------------------------------------------------- */
+%fixed-top-nav {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  display: block;
+  width: 100%;
+  background: transparent;
+}
 
 .nav {
   margin: 0;
-
   text-align: center;
   text-indent: none;
-
   border-bottom: 0;
   background: $page;
   li {
@@ -26,20 +25,7 @@ and more scalable.
       display: inline;
       text-decoration: none;
       color: $blue;
-      /*
-      remember this is for mobile ONLY, so there's no need
-      to even declare hover styles here, you can do it in
-      the style.scss file where it's relevant. We want to
-      keep this file as small as possible!
-      */
     }
-    /*
-    so you really have to rethink your dropdowns for mobile.
-    you don't want to have it expand too much because the
-    screen is so small. How you manage your menu should
-    depend on the project. Here's some great info on it:
-    http://www.alistapart.com/articles/organizing-mobile/
-    */
     ul.sub-menu,
     ul.children {
       li {
@@ -48,48 +34,12 @@ and more scalable.
         }
       }
     }
-  } /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */
-} /* end .nav */
+  }
+}
 
-
-.top-nav {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  display: block;
-  width: 100%;
-  background: transparent;
-  ul:first-of-type {
-    margin: 0 auto;
-    max-width: 1280px;
-  }
-  li#about-item,
-  li#projects-item,
-  li#events-item,
-  li#search-item {
-    display: none;
-  }
-  li#home-item {
-    overflow: hidden;
-    width: 100%;
-    min-height: 40px;
-    text-align: center;
-    text-indent: 999px;
-    background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 12px;
-    background-size: 30px 30px;
-  }
-  li {
-    display: block;
-    float: none;
-    width: 20%;
-    a {
-      display: block;
-      float: none;
-      padding: .75em 2em;
-    }
-  }
+.top-nav-wrapper,
+.mobile-nav-wrapper {
+  @extend %fixed-top-nav;
 }
 
 .subnav {
@@ -105,50 +55,79 @@ and more scalable.
   }
 }
 
-
-@media only screen and (min-width: 481px) { /* Larger Mobile Devices */
-  li#home-item {
-    text-align: center;
-    width: 100%;
-    text-indent: 999px;
-    overflow: hidden;
-    background: transparent url("http://kodit.co/img/spi-logo.gif") no-repeat center 12px;
-    background-size: 40px 40px !important;
-    min-height: 40px;
-
-  }
-
-  .subnav {
-
-    border-top: solid 1px $blue;
-    margin-top: 2.5em;
-    padding-top:1em;
-
-    li{margin: 0 1.75em;}
-
+.mobile-nav-wrapper {
+  padding-top: 15px;
+  .icon-link-wrapper {
+    a:first-of-type {
+      float: left;
+    }
+    a:last-of-type {
+      float: right;
+    }
+    a:not(.mobile-logo) {
+      margin-top: 2px;
+    }
   }
 }
 
+
+@media only screen and (min-width: 481px) { /* Larger Mobile Devices */
+
+  .subnav {
+    border-top: solid 1px $blue;
+    margin-top: 2.5em;
+    padding-top: 1em;
+    li {
+      margin: 0 1.75em;
+    }
+  }
+
+}
+
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
-  .top-nav {
-    border: 0;
-    ul {
-      background:$page;
-      margin-top:1.5em;
+  .top-nav-wrapper {
+    ul:first-of-type {
+      margin: 0 auto;
+      max-width: 1280px;
     }
 
-    li#about-item,
-    li#projects-item,
-    li#events-item,
-    li#search-item { display:block; }
+    li {
+      display: block;
+      float: none;
+      width: 20%;
+      a {
+        display: block;
+        float: none;
+        padding: .75em 2em;
+      }
+    }
 
-    li#about-item,
-    li#projects-item { text-align: left; }
+    border: 0;
+    ul {
+      background: $page;
+      margin-top: 1.5em;
+    }
 
-    li#events-item,
-    li#search-item { text-align: right; }
+    #about-item,
+    #projects-item,
+    #events-item,
+    #search-item { display:block; }
 
-    li#home-item { width: 20%; }
+    #about-item,
+    #projects-item { text-align: left; }
+
+    #events-item,
+    #search-item { text-align: right; }
+
+    #home-item {
+      overflow: hidden;
+      width: 20%;
+      min-height: 40px;
+      text-align: center;
+      text-indent: 999px;
+      background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 12px;
+      background-size: 30px 30px;
+    }
 
     li {
       float: left;

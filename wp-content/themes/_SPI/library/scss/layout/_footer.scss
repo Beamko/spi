@@ -37,8 +37,9 @@
       border-left: none;
       text-align: center;
     }
-    #news-signup form{
-      margin-top: -8px;
+    #news-signup form {
+      max-width: 260px;
+      margin: -8px auto 0;
 
        input {
         background: $page;
@@ -49,13 +50,7 @@
 
       }
       input[type="submit"] {
-        border: solid 1px $blue;
-        padding: 6px 20px 3px 20px;
-        &:hover {
-          text-decoration: none;
-          color: white;
-          background: $blue;
-        }
+        @extend %btn;
       }
     }
   }
