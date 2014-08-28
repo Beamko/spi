@@ -1,4 +1,7 @@
-
+/*
+-------------------------------------------------------------
+  M I X I N S
+------------------------------------------------------------- */
 
 @mixin svgImage($filename, $w, $h, $folder: 'icons/', $display: inline-block ) {
 	background-image: url("../images/" + $folder + $filename + ".svg");
@@ -10,4 +13,11 @@
 	html.no-svg & {
 		background-image: url("../images/" + $folder + $filename + ".png");
 	}
+}
+
+@mixin trans($duration: 0.3s, $timing: linear) {
+  transition: all $duration $timing;
+  -o-transition: all $duration $timing;
+  -moz-transition: all $duration $timing;
+  -webkit-transition: all $duration $timing;
 }

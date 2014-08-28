@@ -119,6 +119,9 @@ jQuery(document).ready(function($) {
 
   spi.init = function () {
     spi.stickyNav();
+    spi.mobileMenus();
+
+
     $(window).on("resize", spi.stickyNav);
   }
 
@@ -133,6 +136,18 @@ jQuery(document).ready(function($) {
       $('#subnav').unstick();
       stickyNavLoaded = false;
     }
+  }
+
+  spi.mobileMenus = function () {
+    $('.js-open-mobile-menu').click(function (e) {
+      e.preventDefault();
+      //_gaq.push(['_trackEvent', 'mobile-nav', 'toggle']);
+      $('.js-mobile-menu').slideToggle('fast');
+    });
+
+    $('.js-mobile-menu a').click(function (e) {
+      $('.js-mobile-menu').slideToggle('fast');
+    });
   }
 
   $(function () { spi.init(); });
