@@ -29,7 +29,7 @@
                 <p>{{post.directors_intro_content}}</p>
             </div>
         </div>
-        <div class="article-sub-section">
+        <div class="article-sub-section member-section">
         {% for director in directors %}
             {% include "members.twig" with { post : director } %}
         {% endfor %} 
@@ -44,7 +44,7 @@
                 <p>{{post.members_intro_content}}</p>
             </div>
         </div>
-        <div class="article-sub-section">
+        <div class="article-sub-section member-section">
             {% for member in members %}
                 {% set memberPosition = '' %}
                 {% if loop.length % 3 == 2 and loop.index == loop.length - 1 %}

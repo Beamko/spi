@@ -132,6 +132,13 @@ h6, .h6 {
   line-height:       13px;
 }
 
+.image-caption {
+  font-family:       $copy;
+  font-weight:       400;
+  font-size:         10px;
+  line-height:       13px;
+}
+
 .link, .menu-item {
   font-family:       $links;
   text-transform:    uppercase;
@@ -144,9 +151,9 @@ h6, .h6 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 
-      &:hover, &:focus {
-        text-decoration: underline;
-      }
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
 }
 
 // Medum Wide Screens
@@ -211,6 +218,11 @@ h6, .h6 {
   }
 
   .caption {
+    font-size:         16px;
+    line-height:       20px;
+  }
+
+  .image-caption {
     font-size:         16px;
     line-height:       20px;
   }
@@ -281,6 +293,11 @@ h6, .h6 {
   }
 
   .caption {
+    font-size:         15px;
+    line-height:       19px;
+  }
+
+  .image-caption {
     font-size:         15px;
     line-height:       19px;
   }

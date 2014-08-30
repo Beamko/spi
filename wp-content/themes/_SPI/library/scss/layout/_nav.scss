@@ -47,8 +47,9 @@
   width: 100%;
   max-width: 1192px;
   margin-top: 0 !important;
-  padding: .75em 0;
+  padding: .75em 0 .55em;
   border-top: solid 1px $blue;
+  border-bottom: solid 1px $blue;
   background-color: $page;
   li {
     margin: 0 1em;
@@ -56,6 +57,7 @@
 }
 
 .mobile-nav-wrapper {
+  z-index: 999;
   .nav {
     padding-top: 15px;
   }
@@ -88,6 +90,7 @@
   .link a,
   .link {
     @include trans(0.3s, ease-in-out);
+    margin-bottom: 15px;
     font-size: 22px;
     color: $page;
     text-transform: uppercase;
@@ -106,9 +109,8 @@
 @media only screen and (min-width: 481px) { /* Larger Mobile Devices */
 
   .subnav {
-    border-top: solid 1px $blue;
     margin-top: 2.5em;
-    padding-top: 1em;
+    padding-top: 1em 0;
     li {
       margin: 0 1.75em;
     }
@@ -174,7 +176,8 @@
 
   .subnav {
     margin-top: 4em;
-    padding-top:1.5em;
+    padding-top: 1.5em;
+    border-bottom: 0;
     li {
       margin: 0 3em;
     }

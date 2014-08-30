@@ -202,9 +202,10 @@ POSTS & CONTENT STYLES
   }
 
   p.wp-caption-text {
-    font-size: 0.85em;
-    margin: 4px 0 7px;
+    @extend .image-caption;
+    margin: 10px 0 14px;
     text-align: center;
+    text-indent: 0;
   }
 
 } /* end .wp-caption */
@@ -268,9 +269,6 @@ POSTS & CONTENT STYLES
 }
 
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
-  .article-header {
-    margin-bottom: 4em;
-  }
 
   .about-section {
     margin-bottom: 3.5em;
