@@ -21,3 +21,9 @@
   -moz-transition: all $duration $timing;
   -webkit-transition: all $duration $timing;
 }
+
+@mixin shadow {
+  -moz-box-shadow: 0 2px 4px #d1d0d0;
+  -webkit-box-shadow: 0 2px 4px #d1d0d0;
+  box-shadow: 0 2px 4px #d1d0d0;
+}

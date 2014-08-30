@@ -120,6 +120,7 @@
 
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
   .top-nav-wrapper {
+    z-index: 999;
     ul:first-of-type {
       margin: 0 auto;
       max-width: 1280px;

@@ -120,6 +120,7 @@ jQuery(document).ready(function($) {
   spi.init = function () {
     spi.stickyNav();
     spi.mobileMenus();
+    spi.memberHover();
 
 
     $(window).on("resize", spi.stickyNav);
@@ -148,6 +149,15 @@ jQuery(document).ready(function($) {
     $('.js-mobile-menu a').click(function (e) {
       $('.js-mobile-menu').slideToggle('fast');
     });
+  }
+
+  spi.memberHover = function () {
+    // $('.js-headshot-wrapper').on('mouseover', function () {
+    //   $(this).find('.bio').fadeIn(300);
+    // });
+    // $('.js-headshot-wrapper').on('mouseout', function () {
+    //   $(this).find('.bio').fadeOut(300);
+    // });
   }
 
   $(function () { spi.init(); });

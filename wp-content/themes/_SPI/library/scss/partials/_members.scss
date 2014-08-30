@@ -18,6 +18,18 @@
 		text-transform: uppercase;
 		word-wrap: break-word;
 	}
+	.bio {
+		@include shadow;
+		background-color: #ffffff;
+		position: absolute;
+		top: 50px;
+		padding: 10px;
+		z-index: 100;
+		p {
+			@extend .caption;
+			margin-bottom: 0;
+		}
+	}
 	h4,
 	h5 {
 		margin-bottom: 0.3em;
@@ -30,33 +42,72 @@
 	}
 }
 
-.director-about-section .single-member {
-	min-height: 230px;
+.headshot-wrapper {
+	.bio {
+		opacity: 0;
+	}
+	&:hover {
+		.bio {
+			@include trans(0.3s);
+			opacity: 1;
+		}
+	}
 }
 
-.member-about-section .single-member {
-	min-height: 190px;
-}
+
+.director-about-section .single-member { min-height: 230px; }
+.member-about-section .single-member { min-height: 190px; }
 
 
 @media only screen and (min-width: 481px) { /* Larger Mobile Devices */
-
-}
-
-@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
 	.member-section {
 		.headshot {
 			margin: 3em auto 1.2em;
 			padding: 0;
 		}
+		.bio {
+			top: 125px;
+			padding: 20px;
+		}
 		h4,
 		h5 {
-			margin-bottom: 0.2em;
+			margin-bottom: 0.3em;
+			font-size: 18px;
+			line-height: 24px;
+		}
+		h6 {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	.director-about-section,
+	.member-about-section {
+		margin-bottom: 2em;
+	}
+}
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+	.member-section {
+		.bio {
+			top: 195px;
+			padding: 35px;
+		}
+		h4,
+		h5 {
+			margin-bottom: 0.3em;
 			font-size: 30px;
+			line-height: 36px;
 		}
 		h6 {
 			font-size: 20px;
+			line-height: 26px;
 		}
+	}
+
+	.director-about-section,
+	.member-about-section {
+		margin-bottom: 3.5em;
 	}
 }
 
