@@ -224,6 +224,7 @@ function add_to_context($data){
 
     $data['about_menu'] = new TimberMenu('about-nav');
     $data['projects_menu'] = new TimberMenu('projects-nav');
+    $data['events_menu'] = new TimberMenu('events-nav');
     $data['footer_links'] = new TimberMenu('footer-links');
     $data['social_links'] = new TimberMenu('social-links');
     return $data;

@@ -3,20 +3,56 @@
   E V E N T S
 ------------------------------------------------------------- */
 
-.event-details .info-text{
+.event-details .info-text {
   text-align: center;
 }
 
-.event-poster-section{
+.event-poster-section {
   margin-top: 5em;
   img {
+  	@include shadow;
     width: 55%;
     max-width: 55%;
-    // TODO SPI
-    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 255, 0.15);
-    -moz-box-shadow:    0px 0px 7px 0px rgba(0, 0, 255, 0.15);
-    box-shadow:         0px 0px 7px 0px rgba(0, 0, 255, 0.15);
   }
+}
+
+.event-item-wrapper {
+	margin-bottom: 38px;
+	img:not(.thumbnail),
+	.callout {
+		@include shadow;
+	}
+	.info-text {
+		margin-bottom: 8px;
+	}
+	.h5 {
+		margin: 0 0 .5em 0;
+	}
+	.callout {
+		padding: 40px;
+		margin: .6em 0 .5em 0;
+	}
+	.thumbnails-wrapper {
+		position: relative;
+	}
+	a {
+		@include trans(0.3s);
+	}
+	.thumbnail {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 1;
+	}
+	&:hover {
+		.thumbnail {
+			opacity: 0;
+		}
+		a:not(.thumbnail) {
+			text-decoration: underline;
+		}
+	}
 }
 
 

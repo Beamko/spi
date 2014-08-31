@@ -3,122 +3,62 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-    margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 
 .hentry {
-    background-color: $page;
-    border-radius: 3px;
-    margin-bottom: 1.5em;
-    //border: 1px solid $border-color;
-
-    header {
-        // border-bottom: 1px solid $light-gray;
-        //padding: 1.5em;
+  background-color: $page;
+  border-radius: 3px;
+  margin-bottom: 1.5em;
+  footer {
+    padding: 1.5em;
+    p {
+      margin: 0;
     }
-
-    footer {
-        padding: 1.5em;
-        // border-top: 1px solid $light-gray;
-
-        p {
-            margin: 0;
-        }
-    }
-
-} /* end .hentry */
-
-.single-title,
-.page-title,
-.entry-title {
-    //margin: 0;
+  }
 }
 
-.single-title {}
-
-.page-title {}
-
-.entry-title {}
-
-.archive-title {}
-
-/* want to style individual post classes? Booya! */
-.post-id {}         /* post by id (i.e. post-3) */
-.post {}            /* general post style */
-.page {}            /* general article on a page style */
-.attachment {}      /* general style on an attatchment */
-.sticky {}          /* sticky post style */
-.hentry {}          /* hentry class */
-.category-slug {}   /* style by category (i.e. category-videos) */
-.tag-slug {}        /* style by tag (i.e. tag-news) */
+.page-title {
+  margin-top: 0.75em;
+  margin-bottom: 1.063em;
+  padding: 0;
+}
 
 /* post meta */
 .byline {
-    color: $blue;
-    font-style: italic;
-    margin: 0;
-
-    time {}
+  color: $blue;
+  font-style: italic;
+  margin: 0;
 }
 
 /* entry content */
 .entry-content {
-  //padding: 1.5em 1.5em 0;
-
-  p {
-      //margin: 0 0 1.5em;
-  }
-
-
-  ul, ol, table, dl {}
-
-  ul, ol {
-
-      li {}
-
-  }
-
-  ul {
-
-      li {}
-
-  }
-
-  ol {
-
-      li {}
-
-  }
-
   table {
-      width: 100%;
-      border: 1px solid $blue;
-      margin-bottom: 1.5em;
-
-      caption {
-          margin: 0 0 7px;
-          font-size: 0.75em;
-          color: $blue;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-      }
+    width: 100%;
+    border: 1px solid $blue;
+    margin-bottom: 1.5em;
+    caption {
+      margin: 0 0 7px;
+      font-size: 0.75em;
+      color: $blue;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
   }
 
   tr {
-      border-bottom: 1px solid $blue;
-
-      &:nth-child(even) {
-          background-color: $blue;
-      }
+    border-bottom: 1px solid $blue;
+    &:nth-child(even) {
+      background-color: $blue;
+    }
   }
 
   td {
-      padding: 7px;
-      border-right: 1px solid $blue;
-
-      &:last-child {
-          border-right: 0;
-      }
+    padding: 7px;
+    border-right: 1px solid $blue;
+    &:last-child {
+      border-right: 0;
+    }
   }
 
   th {
@@ -127,7 +67,7 @@ POSTS & CONTENT STYLES
     border-right: 1px solid $blue;
 
     &:last-child {
-        border-right: 0;
+      border-right: 0;
     }
   }
 
@@ -137,14 +77,7 @@ POSTS & CONTENT STYLES
     border-left: 3px solid $blue;
     font-style: italic;
     color: $blue;
-
-    &:before {}
-
   }
-
-  dl {}
-
-  dt {}
 
   dd {
     margin-left: 0;
@@ -165,17 +98,14 @@ POSTS & CONTENT STYLES
   and floating images at the next breakpoint,
   but it's up to you. Feel free to change it up.
   */
-  .alignleft, img.alignleft {}
-  .alignright, img.alignright {}
-  .aligncenter, img.aligncenter {}
 
   .size-auto,
   .size-full,
   .size-large,
   .size-medium,
   .size-thumbnail {
-      max-width: 100%;
-      height: auto;
+    max-width: 100%;
+    height: auto;
   }
 
   pre {
@@ -210,30 +140,6 @@ POSTS & CONTENT STYLES
 
 } /* end .wp-caption */
 
-/* image gallery styles */
-.gallery {
-
-    dl {
-
-        a {}
-
-        img {}
-
-    }
-
-    dt {}
-
-    dd {}
-
-} /* end .gallery */
-
-/* gallery caption styles */
-.gallery-caption {}
-
-.size-full {}
-.size-large {}
-.size-medium {}
-.size-thumbnail {}
 
 // the tag output
 .tags {
@@ -245,7 +151,6 @@ POSTS & CONTENT STYLES
 @media only screen and (min-width: 481px) { /* Larger Mobile Devices */
   /* entry content */
   .entry-content {
-
 
     /* at this larger size, we can start to align images */
     .alignleft, img.alignleft {
@@ -269,6 +174,10 @@ POSTS & CONTENT STYLES
 }
 
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+  .page-title {
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+  }
 
   .about-section {
     margin-bottom: 3.5em;
