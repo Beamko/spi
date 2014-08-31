@@ -4,7 +4,7 @@
 <article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="article-header row">
-        <h1 class="page-title large-7 column large-centered small-centered">Events: Hosted, Sponsored or Endorsed by SPI</h1>
+        <h1 class="page-title large-7 column large-centered small-centered">{{events.page_title}}</h1>
 
         <div id="subnav" class="subnav">
             {% include 'events-nav.twig' %}
@@ -17,6 +17,7 @@
             <div id="main" data-masonry-options='{ "itemSelector": ".item" }'class="js-masonry m-all t-2of3 d-5of7 cf row" role="main">
 
                 {% for post in posts %}
+
                     <article class="item post-type-{{post.post_type}} large-4 small-12 column" id="post-{{post.ID}}">
                         <section class="article-content event-item-wrapper">
                             <div class="info-text">{{ post.get_field('start_date') }} &mdash; {{ post.get_field('end_date') }}</div>
