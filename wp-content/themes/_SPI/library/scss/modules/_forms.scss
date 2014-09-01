@@ -58,6 +58,7 @@ textarea,
   // a focused input (or hovered on)
   &:focus,
   &:active {
+    outline: none;
     background-color: lighten($blue, 4%);
   } // end hover or focus
 

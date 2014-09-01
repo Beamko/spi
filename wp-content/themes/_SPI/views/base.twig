@@ -6,6 +6,8 @@
 {% endblock %}
     <body class="{{body_class}}" data-template="base.twig">
 
+        {% include 'mobile-menu.twig' %}
+
         <div id="container">
             <header class="header" role="banner">
 
@@ -13,8 +15,12 @@
 
                 <div id="inner-header" class="wrap cf">
 
-                    <nav role="navigation" class="top-nav">
+                    <nav role="navigation" class="top-nav-wrapper">
                         {% include 'nav.twig' %}
+                    </nav>
+
+                    <nav role="navigation" class="mobile-nav-wrapper">
+                        {% include 'mobile-nav.twig' %}
                     </nav>
 
                     {% block submenu %}

@@ -22,14 +22,14 @@
         {% endfor %}
     </section>
 
-    <section class="director-about-section about-section row">
+    <section id="Directors" class="director-about-section about-section row">
         <div class="article-content">
             <h2 class="article-h1">{{post.directors_section_title}}</h2>
             <div class="article-body">
                 <p>{{post.directors_intro_content}}</p>
             </div>
         </div>
-        <div class="article-sub-section">
+        <div class="article-sub-section member-section">
         {% for director in directors %}
             {% include "members.twig" with { post : director } %}
         {% endfor %} 
@@ -37,14 +37,14 @@
 
     </section>
 
-     <section class="member-about-section about-section row">
+     <section id="Members" class="member-about-section about-section row">
         <div class="article-content">
             <h2 class="article-h1">{{post.members_section_title}}</h2>
             <div class="article-body">
                 <p>{{post.members_intro_content}}</p>
             </div>
         </div>
-        <div class="article-sub-section">
+        <div class="article-sub-section member-section">
             {% for member in members %}
                 {% set memberPosition = '' %}
                 {% if loop.length % 3 == 2 and loop.index == loop.length - 1 %}

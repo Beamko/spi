@@ -57,7 +57,7 @@
 					<?php // bloginfo('description'); ?>
 
 
-					<nav role="navigation" class="top-nav">
+					<nav role="navigation" class="top-nav-wrapper">
 						<?php wp_nav_menu(array(
     					'container' => false,                           // remove nav container
     					'container_class' => 'menu cf',                 // class of container (should you choose to use it)

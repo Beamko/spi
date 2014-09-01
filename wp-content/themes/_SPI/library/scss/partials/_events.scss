@@ -3,20 +3,84 @@
   E V E N T S
 ------------------------------------------------------------- */
 
-.event-details .info-text{
+.event-details .info-text {
   text-align: center;
 }
 
-.event-poster-section{
+.event-poster-section {
   margin-top: 5em;
   img {
+  	@include shadow;
     width: 55%;
     max-width: 55%;
-    // TODO SPI
-    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 255, 0.15);
-    -moz-box-shadow:    0px 0px 7px 0px rgba(0, 0, 255, 0.15);
-    box-shadow:         0px 0px 7px 0px rgba(0, 0, 255, 0.15);
   }
+}
+
+.event-item-wrapper {
+	margin-bottom: 38px;
+	img:not(.thumbnail),
+	.callout {
+		@include shadow;
+	}
+	.info-text {
+		margin-bottom: 8px;
+	}
+	.h5 {
+		margin: 0 0 .5em 0;
+	}
+	.callout {
+		position: relative;
+		padding: 40px;
+		margin: .8em 0 .5em 0;
+		.h5 {
+			margin: 0;
+			font-size: 50px;
+			line-height: 53px;
+		}
+		a {
+			@include hyphenate;
+		}
+	}
+	.thumbnails-wrapper {
+		position: relative;
+	}
+	a {
+		@include trans(0.3s);
+	}
+	.thumbnail {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 1;
+	}
+	&:hover {
+		.thumbnail {
+			opacity: 0;
+		}
+		a:not(.thumbnail) {
+			text-decoration: underline;
+		}
+	}
+	.tag {
+    position: absolute;
+    right: 0;
+    bottom: -14px;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+		span {
+			display: inline-block;
+			border: 1px solid $blue;
+			padding: 4px 16px 1px;
+			background-color: $page;
+			font-family: $links;
+			font-size: 14px;
+			line-height: 14px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+	}
 }
 
 

@@ -1,0 +1,14 @@
+<section class="js-mobile-menu mobile-menu" style="display:none;">
+	<a href="javascript:void(0);" class="js-hide-mobile-menu link hide-mobile-menu icon-close-white"></a>
+	<div class="row menu-link-container">
+		<div class="large-12 large-centered column">
+			 <ul>
+			    {% for item in footer_links.items %}
+			    <li class="link">
+			        <a href="{{item.link}}">{{item.title}}</a>
+			    </li>
+			    {% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>

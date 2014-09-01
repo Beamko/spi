@@ -23,11 +23,6 @@ body {
   margin-top: 3.5em;
 }
 
-.page-title {
-  margin-top: 0.75em;
-  margin-bottom: 1.063em;
-}
-
 .feature-block {
   height: 800px;
   background-repeat: no-repeat;
@@ -57,13 +52,6 @@ body {
   [class*="column"]+[class*="column"]:last-child {
     float: left;
   }
-}
-
-.article-sub-section {
-  .headshot {
-    margin-top: 1.75em;
-  }
-
 }
 
 

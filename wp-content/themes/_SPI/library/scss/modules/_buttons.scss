@@ -27,23 +27,23 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 %btn {
   display: inline-block;
   position: relative;
-  //font-family: $sans-serif;
-  text-decoration: none;
-  color: $page;
-  font-size: 0.9em;
-  font-size: 34px;
-  line-height: 34px;
+  font-family: $links;
+  text-decoration: none;    
+  font-size: 20px;
+  line-height: 38px;
   font-weight: normal;
-  padding: 0 24px;
-  border-radius: 4px;
-  border: 0;
+  padding: 6px 20px 3px 20px;
+  border: solid 1px $blue;
   cursor: pointer;
-  @include transition(background-color 0.14s ease-in-out);
+  @include transition(background-color 0.3s ease-in-out);
 
   // hovering on the btn
-  &:hover, &:focus {
-    color: $page;
+  &:hover, &:focus, &:active {
     text-decoration: none;
+    color: $page;
+    background: $blue;
+    text-decoration: none;
+    outline: none;
   } // end hover
 
   // clicking on the button

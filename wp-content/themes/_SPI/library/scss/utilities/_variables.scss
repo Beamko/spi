@@ -18,3 +18,12 @@ $yellow:     #fff700;
 $green:      #00FF00;
 $page:       #FFFFFF;
 $black:      #333333;
+
+
+.show-for-small { display: block; }
+.hide-for-small { display: none; }
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+	.show-for-small { display: none; }
+	.hide-for-small { display: block; }
+}

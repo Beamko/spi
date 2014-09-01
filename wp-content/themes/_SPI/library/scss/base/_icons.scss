@@ -1,0 +1,28 @@
+/*
+-------------------------------------------------------------
+  L O G O S
+------------------------------------------------------------- */
+
+.mobile-logo {
+	@include svgImage(mobile-logo, 27px, 26px, 'logos/')
+}
+
+/*
+-------------------------------------------------------------
+  I C O N S
+------------------------------------------------------------- */
+.icon-menu {
+	@include svgImage(menu, 20px, 20px)
+}
+
+.icon-search {
+	@include svgImage(search, 21px, 21px)
+}
+
+.icon-close {
+	@include svgImage(close, 21px, 21px)
+}
+
+.icon-close-white {
+	@include svgImage(close-white, 15px, 15px)
+}

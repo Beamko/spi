@@ -29,6 +29,7 @@ http://thesassway.com/advanced/modular-css-naming-conventions
 
 @import "utilities/variables";
 @import "utilities/functions";
+@import "utilities/mixins";
 
 
 /*
@@ -36,6 +37,7 @@ http://thesassway.com/advanced/modular-css-naming-conventions
 	B A S E
 ------------------------------------------------------------- */
 @import "base/typography";
+@import "base/icons";
 
 
 /*

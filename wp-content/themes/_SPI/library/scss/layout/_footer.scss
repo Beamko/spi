@@ -7,7 +7,8 @@
   clear: both;
   background-color: $page;
   color: $blue;
-  margin-top: 3em;
+  margin-top: 0.8em;
+  padding-bottom: 0.8em;
   text-align: center;
 
   .footer-blocks{
@@ -16,7 +17,7 @@
       width: 100%;
       float: left;
       border-left: none;
-      height: 130px;
+      height: 120px;
       text-indent: 0 !important;
       padding: 0 1em;
 
@@ -37,8 +38,9 @@
       border-left: none;
       text-align: center;
     }
-    #news-signup form{
-      margin-top: -8px;
+    #news-signup form {
+      max-width: 260px;
+      margin: -8px auto 0;
 
        input {
         background: $page;
@@ -49,16 +51,15 @@
 
       }
       input[type="submit"] {
-        border: solid 1px $blue;
-        padding: 6px 20px 3px 20px;
-        &:hover {
-          text-decoration: none;
-          color: white;
-          background: $blue;
-        }
+        @extend %btn;
       }
     }
   }
+}
+
+.social-links {
+  max-width: 190px;
+  margin: 0 auto;
 }
 
 
@@ -77,6 +78,7 @@
         float: left;
         height: 195px;
         border-left: solid 1px $blue;
+        padding-top: 2em;
       }
       #social-links {
         border-left: none;
@@ -86,6 +88,10 @@
         text-align: center;
       }
     }
+  }
+
+  .social-links {
+    max-width: auto;
   }
 }
 
@@ -102,14 +108,13 @@
         width: 25%;
         float: left;
         height: 195px;
-        //border-left: none;
       }
       #social-links {
         border-left: solid 1px $blue;
-        padding: 0 2em;
+        padding: 2em 2em 0;
       }
       #site-contents{
-        padding: 0 2em;
+        padding: 2em 2em 0;
       }
 
     }
@@ -126,11 +131,11 @@
         width: 25%;
         float: left;
         height: 195px;
-        //border-left: none;
       }
 
       #social-links,  #site-contents {
-        padding: 0 3em;
+        padding-left: 3em;
+        padding-right: 3em;
       }
     }
   }

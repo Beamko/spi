@@ -1,21 +1,18 @@
 <div class="large-4 small-6 column {{memberPosition}}">
-    <div class="member-section">
-        <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-            <section class="single-member">
+    <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+        <section class="single-member">
+            <div class="headshot-wrapper">
+                <img class="headshot" src="{{post.get_field('headshot')}}" alt="{{post.title}}">
+                <div class="bio">{{post.content}}</div>   
+            </div>
 
-                <img class="headshot" src="{{post.get_field('headshot')}}" alt="{{post.title}}">  
+            <h4>{{post.title}}</h4>
 
-                <h4>
-                    {{post.title}}
-                </h4>
+            <h5>{{post.get_field('position')}}</h5>
 
-                <h5>{{post.get_field('position')}}</h5>
+            <h6 class="email">{{post.get_field('email')}}</h6>
 
-                <h6 class="email">{{post.get_field('email')}}</h6>          
-                
+        </section>
 
-            </section>
-
-        </article>
-    </div>
+    </article>
 </div>
