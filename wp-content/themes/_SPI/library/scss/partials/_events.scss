@@ -29,8 +29,17 @@
 		margin: 0 0 .5em 0;
 	}
 	.callout {
+		position: relative;
 		padding: 40px;
-		margin: .6em 0 .5em 0;
+		margin: .8em 0 .5em 0;
+		.h5 {
+			margin: 0;
+			font-size: 50px;
+			line-height: 53px;
+		}
+		a {
+			@include hyphenate;
+		}
 	}
 	.thumbnails-wrapper {
 		position: relative;
@@ -51,6 +60,25 @@
 		}
 		a:not(.thumbnail) {
 			text-decoration: underline;
+		}
+	}
+	.tag {
+    position: absolute;
+    right: 0;
+    bottom: -14px;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+		span {
+			display: inline-block;
+			border: 1px solid $blue;
+			padding: 4px 16px 1px;
+			background-color: $page;
+			font-family: $links;
+			font-size: 14px;
+			line-height: 14px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
 	}
 }

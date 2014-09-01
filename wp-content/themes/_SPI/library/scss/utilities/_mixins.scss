@@ -27,3 +27,15 @@
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 255, 0.15);
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 255, 0.15);
 }
+
+@mixin hyphenate {
+	-ms-word-break: break-all;
+	word-break: break-all;
+
+	// Non standard for webkit
+	word-break: break-word;
+
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}

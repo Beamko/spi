@@ -44,14 +44,15 @@
 
 .headshot-wrapper {
 	.bio {
+		@include trans(0.3s);
 		opacity: 0;
 	}
-	&:hover {
+	.headshot:hover {
 		.bio {
-			@include trans(0.3s);
 			opacity: 1;
 		}
 	}
+
 }
 
 

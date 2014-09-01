@@ -120,6 +120,7 @@ jQuery(document).ready(function($) {
   spi.init = function () {
     spi.stickyNav();
     spi.mobileMenus();
+    spi.scrollToSection();
 
 
     $(window).on("resize", spi.stickyNav);
@@ -148,6 +149,18 @@ jQuery(document).ready(function($) {
     $('.js-mobile-menu a').click(function (e) {
       $('.js-mobile-menu').slideToggle('fast');
     });
+  }
+
+  spi.scrollToSection = function () {
+    $('.js-subnav-link').on('click', function (e) {
+      e.preventDefault();
+      var section = $(e.target).attr('href')
+      var offset = 143; //Offset of 20px
+
+      $('html, body').animate({
+          scrollTop: $(section).offset().top - offset
+      }, 350);
+    }); 
   }
 
 

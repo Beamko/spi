@@ -78,6 +78,7 @@
         float: left;
         height: 195px;
         border-left: solid 1px $blue;
+        padding-top: 2em;
       }
       #social-links {
         border-left: none;
@@ -107,14 +108,13 @@
         width: 25%;
         float: left;
         height: 195px;
-        //border-left: none;
       }
       #social-links {
         border-left: solid 1px $blue;
-        padding: 0 2em;
+        padding: 2em 2em 0;
       }
       #site-contents{
-        padding: 0 2em;
+        padding: 2em 2em 0;
       }
 
     }
@@ -131,11 +131,11 @@
         width: 25%;
         float: left;
         height: 195px;
-        //border-left: none;
       }
 
       #social-links,  #site-contents {
-        padding: 0 3em;
+        padding-left: 3em;
+        padding-right: 3em;
       }
     }
   }

@@ -20,7 +20,7 @@
 
                     <article class="item post-type-{{post.post_type}} large-4 small-12 column" id="post-{{post.ID}}">
                         <section class="article-content event-item-wrapper">
-                            <div class="info-text">{{ post.get_field('start_date') }} &mdash; {{ post.get_field('end_date') }}</div>
+                            <div class="info-text">{{ post.start_date }} &mdash; {{ post.end_date }}</div>
                             {% if post.get_field('event_image') %}
                             <h1 class="h5">
                                 <a href="{{post.permalink}}">{{post.title}}</a>
@@ -28,14 +28,23 @@
                             <div class="thumbnails-wrapper">
                                 <a href="{{post.permalink}}"><img src="{{TimberImage(post.get_field('event_image')).src}}" /></a>
                                 <a href="{{post.permalink}}" class="thumbnail"><img src="{{TimberImage(post.get_field('event_thumbnail')).src}}" /></a>
+                                {% if post.get_field('event_type') %}
+                                <div class="tag">
+                                    <span>{{post.get_field('event_type')}}</span>
+                                </div>
+                                {% endif %}
                             </div>
 
                             {% else %}
-                            <h1 class="h5 callout">
-                                <a href="{{post.permalink}}">{{post.title}}</a>
-                            </h1>
+                            <div class="callout">
+                                <h1 class="h5"><a href="{{post.permalink}}">{{post.title}}</a></h1>
+                                {% if post.get_field('event_type') %}
+                                <div class="tag">
+                                    <span>{{post.get_field('event_type')}}</span>
+                                </div>
+                                {% endif %}
+                            </div>
                             {% endif %}
-                            <span>{{post.get_field('event_type')}}</span>
                         </section>
                     </article>
                 {% endfor %}
