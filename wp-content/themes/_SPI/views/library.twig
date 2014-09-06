@@ -6,28 +6,27 @@
 
     <header class="article-header row">
 
-        <h1 class="page-title large-8 column large-centered small-centered">{{post.get_field('donations_page_title')}}</h1>
+        <h1 class="page-title large-7 column large-centered small-centered">{{post.library_page_title}}</h1>
 
     </header>
-
-    <section class="donation-form-section">
-        <input type="text" placeholder="Donation Amount ($)">
-        <input class="link" type="submit" value="Send Donation">
-    </section>
 
     <section class="primary-about-sections entry-content cf" itemprop="articleBody">
         <div class="about-section">
             <article>
                 <section class="article-content">
-                    <h2 class="article-h1">{{post.get_field('donations_description_header')}}</h2>
                     <div class="article-body">
-                        {{post.get_field('donations_description')}}
+                        {{post.get_field('description')}}
                     </div>
                 </section>
 
             </article>
         </div>
+    </section>
 
+    <section class="primary-about-sections entry-content cf" itemprop="articleBody">
+        {% for library_section in library_sections %}
+            {% include "library-section.twig" with { post : library_sections_section} %}
+        {% endfor %}
     </section>
 
 </article>
