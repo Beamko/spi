@@ -121,6 +121,7 @@ jQuery(document).ready(function($) {
     spi.stickyNav();
     spi.mobileMenus();
     spi.scrollToSection();
+    spi.filterEvents();
 
 
     $(window).on("resize", spi.stickyNav);
@@ -160,6 +161,42 @@ jQuery(document).ready(function($) {
       $('html, body').animate({
           scrollTop: $(section).offset().top - offset
       }, 350);
+    }); 
+  }
+
+  spi.filterEvents = function () {
+    $('.js-filter-all').on('click', function (e) {
+      e.preventDefault();
+
+      $('.js-event-item').fadeIn();
+
+    }); 
+
+    $('.js-filter-upcoming').on('click', function (e) {
+      e.preventDefault();
+
+      $('.js-event-item').fadeOut(300, function () {
+        $('.js-upcoming').fadeIn(300);
+      });
+
+    }); 
+
+    $('.js-filter-past').on('click', function (e) {
+      e.preventDefault();
+
+      $('.js-event-item').fadeOut(300, function () {
+        $('.js-past').fadeIn(300);
+      });
+
+    }); 
+
+    $('.js-filter-ongoing').on('click', function (e) {
+      e.preventDefault();
+
+      $('.js-event-item').fadeOut(300, function () {
+        $('.js-ongoing').fadeIn(300);
+      });
+
     }); 
   }
 

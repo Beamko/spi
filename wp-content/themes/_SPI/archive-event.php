@@ -1,4 +1,16 @@
 <?php
+	global $wp_query;
+
+	//Get events
+	$query_args = array(
+		'posts_per_page' => -1,
+		'meta_key' => 'start_date',
+		'orderby'	=> 'meta_value_num',
+		'order' => 'DESC',
+		'post_type' => 'event'
+	);
+
+$wp_query = new WP_Query($query_args);
 
 $context = Timber::get_context();
 $context['events'] = Timber::get_post(34);
@@ -14,6 +26,7 @@ foreach ($context['posts'] as $post){
 
 	$start_date = $post->get_field('start_date');
 	$end_date = $post->get_field('end_date');
+	$current_time = time();
 
 	if (date_i18n( $date_only, $end_date ) ==  date_i18n( $date_only, $start_date )) {
 		// If same date
@@ -26,6 +39,19 @@ foreach ($context['posts'] as $post){
 	} else {
 	  $post->end_date = date_i18n( $display_format, $end_date );
 	  $post->start_date =  date_i18n( $display_format, $start_date );
+	}
+
+	$post->status  = '';
+	if ($post->get_field('repeat_event') === 'Yes'){
+		$post->status .= 'js-ongoing '; 
+	}
+
+	if ($current_time < $end_date){
+		$post->status .= 'js-upcoming '; 
+	}
+
+	if ($current_time > $end_date){
+		$post->status .= 'js-past '; 
 	}
 }
 

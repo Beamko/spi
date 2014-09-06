@@ -18,7 +18,7 @@
 
                 {% for post in posts %}
 
-                    <article class="item post-type-{{post.post_type}} large-4 small-12 column" id="post-{{post.ID}}">
+                    <article class="js-event-item item post-type-{{post.post_type}} large-4 small-12 column {{post.status}}" id="post-{{post.ID}}">
                         <section class="article-content event-item-wrapper">
                             <div class="info-text">{{ post.start_date }} &mdash; {{ post.end_date }}</div>
                             {% if post.get_field('event_image') %}

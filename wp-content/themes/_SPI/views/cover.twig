@@ -2,18 +2,16 @@
 
 {% block content %}
 
-<!--<article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">-->
-<div class="feature-block" style="background-image: url('{{TimberImage(post.get_field('cover_image')).src}}');">
+<!-- <article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting"> -->
+	<div class="feature-block" style="background-image: url('{{TimberImage(post.get_field('cover_image')).src}}');">
 
-    <!--<img src="{{TimberImage(post.get_field('cover_image')).src}}" />-->
+	    <div class="feature-info">
+	        <a href="{{post.get_field('feature_link')}}">
+	            <h1>{{post.feature_title}}</h1>
+	        </a>
+	    </div>
+	<div>
 
-    <div class="feature-info">
-        <a href="{{post.feature_link}}">
-            <h1>{{post.feature_title}}</h1>
-        </a>
-    </div>
-<div>
-
-<!--</article>-->
+<!-- </article> -->
 
 {% endblock %}
