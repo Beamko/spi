@@ -139,6 +139,18 @@ h6, .h6 {
   line-height:       13px;
 }
 
+%button-text {
+  font-family:       $links;
+  text-transform:    uppercase;
+  font-weight:       400;
+  letter-spacing:    2px;
+  font-size:         15px;
+  line-height:       26px;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 .link, .menu-item {
   font-family:       $links;
   text-transform:    uppercase;
