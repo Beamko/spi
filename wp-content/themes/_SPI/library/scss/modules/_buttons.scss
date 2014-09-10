@@ -34,8 +34,8 @@
 
 %blue-btn {
   @extend %btn;
-  background-color: $page;
-  border: solid 1px $blue;
+  background-color: $blue;
+  border: solid 1px $page;
   color: $page;
   cursor: pointer;
   &:hover, &:focus, &:active {

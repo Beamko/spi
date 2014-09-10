@@ -1,0 +1,41 @@
+/*
+---------------------------------
+  D O N A T I O N S   P A G E
+--------------------------------- */
+.donation-form-section {
+	margin-bottom: 40px;
+	padding: 45px 0;
+	border-bottom: 1px solid $blue;
+	border-top: 1px solid $blue;
+	input[type="text"] {
+		margin: 0 auto 14px;
+		padding-bottom: 10px;
+	  font-family: $copy;
+	  font-style: italic;
+		font-size: 20px;
+	}
+}
+
+
+@media only screen and (min-width: 481px) { /* Larger Mobile Devices */
+
+}
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+.donation-form-section {
+	margin-bottom: 65px;
+	padding: 65px 0;
+	input[type="text"] {
+		margin: 0 auto 17px;
+		font-size: 30px;
+	}
+}
+}
+
+@media only screen and (min-width: 1030px) { /* Desktop */
+
+}
+
+@media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
+
+}
