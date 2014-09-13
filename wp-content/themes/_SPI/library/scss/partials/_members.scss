@@ -18,6 +18,9 @@
 		text-transform: uppercase;
 		word-wrap: break-word;
 	}
+	i {
+		margin-right: 3px;
+	}
 	.bio {
 		@include shadow;
 		background-color: #ffffff;
@@ -45,12 +48,16 @@
 .headshot-wrapper {
 	.bio {
 		@include trans(0.3s);
+		visibility: hidden;
+		overflow: hidden;
 		opacity: 0;
+		height: 0;
 	}
-	.headshot:hover {
-		.bio {
-			opacity: 1;
-		}
+	.headshot:hover ~ .bio,
+	.bio:not([style="visibility: hidden"]):hover {
+		visibility: visible;
+		opacity: 1.0;
+		height: auto;
 	}
 
 }

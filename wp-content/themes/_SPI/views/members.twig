@@ -10,7 +10,7 @@
 
             <h5>{{post.get_field('position')}}</h5>
 
-            <h6 class="email">{{post.get_field('email')}}</h6>
+            <h6 class="email"><i class="icon-mail"></i><a href="mailto:{{post.get_field('email')}}"> {{post.get_field('email')}}</a></h6>
 
         </section>
 
