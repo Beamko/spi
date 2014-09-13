@@ -4,7 +4,7 @@
 
 <article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="article-header row">
+    <header class="row">
 
         <h1 class="page-title large-7 column large-centered small-centered">{{post.library_page_title}}</h1>
 
@@ -23,11 +23,9 @@
         </div>
     </section>
 
-    <section class="primary-about-sections entry-content cf" itemprop="articleBody">
-        {% for library_section in library_sections %}
-            {% include "library-section.twig" with { post : library_sections_section} %}
-        {% endfor %}
-    </section>
+    {% for library_section in library_sections %}
+        {% include "library-section.twig" with { post : library_section} %}
+    {% endfor %}
 
 </article>
 

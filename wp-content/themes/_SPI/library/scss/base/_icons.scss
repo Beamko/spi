@@ -12,17 +12,29 @@
   I C O N S
 ------------------------------------------------------------- */
 .icon-menu {
-	@include svgImage(menu, 20px, 20px)
+	@include svgImage(menu, 20px, 20px);
 }
 
 .icon-search {
-	@include svgImage(search, 21px, 21px)
+	@include svgImage(search, 21px, 21px);
 }
 
 .icon-close {
-	@include svgImage(close, 21px, 21px)
+	@include svgImage(close, 21px, 21px);
 }
 
 .icon-close-white {
-	@include svgImage(close-white, 15px, 15px)
+	@include svgImage(close-white, 15px, 15px);
+}
+
+.icon-doc {
+	@include svgImage(doc, 13px, 17px);
+}
+
+.icon-link {
+	@include svgImage(link, 16px, 16px);
+}
+
+.icon-mail {
+	@include svgImage(mail, 12px, 16px);
 }

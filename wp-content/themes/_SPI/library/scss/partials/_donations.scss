@@ -9,10 +9,10 @@
 	border-top: 1px solid $blue;
 	input[type="text"] {
 		margin: 0 auto 14px;
-		padding-bottom: 10px;
 	  font-family: $copy;
 	  font-style: italic;
 		font-size: 20px;
+		line-height: 26px;
 	}
 }
 
@@ -26,8 +26,10 @@
 	margin-bottom: 65px;
 	padding: 65px 0;
 	input[type="text"] {
+		height: 44px;
 		margin: 0 auto 17px;
 		font-size: 30px;
+		line-height: 38px;
 	}
 }
 }

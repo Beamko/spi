@@ -1,0 +1,24 @@
+<div id="{{post.title}}" class="library-section">
+    <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+        {{post.title}}
+        {% for item in post.get_field('library_sub_section') %}
+            <h2>{{item.sub_section_title}}</h2>
+            <ul>
+            {% for resource in item.resources %}
+                <li>
+                {% if resource.resource_type == "document" %}
+                    <i class="icon-doc"></i>
+                    <a href="{{resource.document}}" target="_blank">{{resource.document_title}}</a>
+                {% endif %}
+                {% if resource.resource_type == "link" %}
+                    <i class="icon-link"></i>
+                    <a href="{{resource.link_url}}" target="_blank">{{resource.link_title}}</a>
+                {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+
+        {% endfor %}
+        
+    </article>
+</div>
