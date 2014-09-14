@@ -35,7 +35,7 @@ textarea,
   border: none;
   border-bottom: solid 1px blue;
   border-radius: 0;
-  background: #fff;
+  background: none;
   box-shadow: none;
   color: $blue;
   font-family: $info;
@@ -69,6 +69,20 @@ textarea,
       background-color: $blue;
     }
   }
+  &.blue-input {
+    border-bottom: solid 1px #fff;
+    background: none;
+    color: #fff;
+  }
+}
+
+
+%large-input {
+  margin: 0 auto 14px;
+  font-family: $copy;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 26px;
 }
 
 /*
@@ -110,4 +124,17 @@ select {
 
 :-ms-input-placeholder {  
   color: $lightBlue;
+}
+
+
+
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+
+  %large-input {
+    height: 44px;
+    margin: 0 auto 17px;
+    font-size: 30px;
+    line-height: 38px;
+  }
 }

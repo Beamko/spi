@@ -1,0 +1,35 @@
+/*
+-------------------------------------------------------------
+  L I B R A R Y
+------------------------------------------------------------- */
+.resource-section {
+	h2 {
+		margin-bottom: 1.4em;
+	}
+	ul {
+		margin-bottom: 4em;
+		text-align: center;
+	}
+	li {
+		height: 30px;
+	}
+}
+
+
+
+.resource {
+	@extend .link;
+	display: inline-block;
+	i,
+	a {
+		display: block;
+		float: left;
+	}
+	i {
+		clear: both;
+		margin: 9px 4px 0 0;
+	}
+	a {
+		text-decoration: none;
+	}
+}

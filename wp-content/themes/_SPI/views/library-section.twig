@@ -1,24 +1,31 @@
-<div id="{{post.title}}" class="library-section">
+<div id="{{post.title}}" class="resource-section">
     <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-        {{post.title}}
+        <h2>{{post.title}}</h2>
+        <div data-masonry-options='{ "itemSelector": ".item" }' class="js-masonry m-all t-2of3 d-5of7 cf row" role="main">
         {% for item in post.get_field('library_sub_section') %}
-            <h2>{{item.sub_section_title}}</h2>
-            <ul>
-            {% for resource in item.resources %}
-                <li>
-                {% if resource.resource_type == "document" %}
-                    <i class="icon-doc"></i>
-                    <a href="{{resource.document}}" target="_blank">{{resource.document_title}}</a>
-                {% endif %}
-                {% if resource.resource_type == "link" %}
-                    <i class="icon-link"></i>
-                    <a href="{{resource.link_url}}" target="_blank">{{resource.link_title}}</a>
-                {% endif %}
-                </li>
-            {% endfor %}
-            </ul>
-
+        
+            <div class="large-4 column item" style="width: 33%;">
+                <h3>{{item.sub_section_title}}</h3>
+                <ul>
+                {% for resource in item.resources %}
+                    <li>
+                        <span class="resource">
+                            {% if resource.resource_type == "document" %}
+                                <i class="icon-doc"></i>
+                                <a href="{{resource.document}}" target="_blank">{{resource.document_title}}</a>
+                            {% endif %}
+                            {% if resource.resource_type == "link" %}
+                                <i class="icon-link"></i>
+                                <a href="{{resource.link_url}}" target="_blank">{{resource.link_title}}</a>
+                            {% endif %} 
+                        </span>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+        
         {% endfor %}
+        </div>
         
     </article>
 </div>

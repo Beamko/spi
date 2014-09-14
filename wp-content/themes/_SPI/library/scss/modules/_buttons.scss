@@ -34,7 +34,7 @@
 
 %blue-btn {
   @extend %btn;
-  background-color: $blue;
+  background: none;
   border: solid 1px $page;
   color: $page;
   cursor: pointer;
@@ -42,6 +42,17 @@
     color: $blue;
     background: $page;
   }
+}
+
+%transparent-btn-on-blue {
+  @extend %btn;
+  background: none;
+  border: none;
+  color: $page;
+  &:hover, &:focus, &:active {
+    color: $page;
+    background: none;
+  } 
 }
 
 
