@@ -60,7 +60,8 @@
       margin-bottom: 45px;
     }
   }
-  button {
+  button,
+  input[type="submit"] {
     @extend %blue-btn;
   }
   .secondary-btn {

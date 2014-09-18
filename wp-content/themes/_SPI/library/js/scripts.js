@@ -125,7 +125,6 @@ jQuery(document).ready(function($) {
     spi.newsletterSignup();
     spi.searchSite();
 
-
     $(window).on("resize", spi.stickyNav);
   }
 
@@ -205,8 +204,37 @@ jQuery(document).ready(function($) {
   spi.newsletterSignup = function () {
     $('.js-submit-newsletter-1').click(function (e) {
       e.preventDefault();
-      //_gaq.push(['_trackEvent', 'mobile-nav', 'toggle']);
-      $('.js-newsletter-form').slideToggle('fast');
+      // _gaq.push(['_trackEvent', 'footer', 'newsletter-sign-up']);
+
+      var form = $('#newsletter-signup-1');
+      var formEmail = form.find('#email-address');
+      var emailVal = formEmail.val();
+      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+      formEmail.removeClass('invalid');
+      form.find('.error').remove();
+
+
+
+      if (emailVal == '') {
+        formEmail.addClass('invalid');
+        formEmail.focus();
+        formEmail.after("<div class='error'>Please enter your email.</div>");
+      } else if (!regex.test(emailVal)) {
+        formEmail.addClass('invalid');
+        formEmail.focus();
+        formEmail.after("<div class='error'>Please enter a valid email address.</div>");
+      } else {
+        $('.js-newsletter-form').slideToggle('fast');
+        $('.js-newsletter-form').find('#mce-EMAIL').val(emailVal).attr('disabled', true);
+
+        $('#mc-embedded-subscribe').on('click', function () {
+          $('.js-newsletter-form').find('#mce-EMAIL').attr('disabled', false);
+        })
+      }
+
+      
+
     });
 
     $('.js-newsletter-form a').click(function (e) {
