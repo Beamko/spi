@@ -1,21 +1,7 @@
 /*
 -------------------------------------------------------------
-  E V E N T S
+  E V E N T S   L A N D I N G   P A G E
 ------------------------------------------------------------- */
-
-.event-details .info-text {
-  text-align: center;
-}
-
-.event-poster-section {
-  margin-top: 5em;
-  img {
-  	@include shadow;
-    width: 55%;
-    max-width: 55%;
-  }
-}
-
 .event-item-wrapper {
 	margin-bottom: 38px;
 	img:not(.thumbnail),
@@ -41,11 +27,11 @@
 			@include hyphenate;
 		}
 	}
-	.thumbnails-wrapper {
-		position: relative;
-	}
 	a {
 		@include trans(0.3s);
+	}
+	.thumbnails-wrapper {
+		position: relative;
 	}
 	.thumbnail {
 		position: absolute;
@@ -62,6 +48,10 @@
 			text-decoration: underline;
 		}
 	}
+}
+
+
+.event-item-wrapper {
 	.tag {
     position: absolute;
     right: 0;
@@ -83,24 +73,67 @@
 	}
 }
 
+/*
+-------------------------------------------------------------
+  S I N G L E   E V E N T   P A G E
+------------------------------------------------------------- */
+
+/* Event detail section - Ticket info, date and time, location */
+.event-details {
+	border-top: 1px solid $blue;
+	.info-text {
+	  text-align: center;
+	}
+	section {
+		margin-top: 35px;
+		p {
+			@extend .info-text;
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+/* Event details text sections */
+.event-section {
+	@extend .entry-content;
+	margin: 0 0 3em 0;
+	p {
+		text-indent: 0;
+		&:not([style*="text-align: center"]) { /* Only text-indent if text is not center-aligned */
+			text-indent: 3em;
+		}
+	}
+	img {
+		margin-bottom: 0;
+	}
+}
+
+/* Event poster section */
+.event-poster-section {
+  margin-top: 3em;
+  img {
+  	@include shadow;
+  	margin: 0 0 1em 0;
+  }
+}
+
 
 @media only screen and (min-width: 481px) { /* Larger Mobile Devices */
 
 }
 
-@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
-	.event-details {
-		//border-top: 1px solid $blue;
+@media only screen and (min-width: 641px) { /* Tablets, smaller laptops */
+
+	.event-details section {
+		margin-top: 2.5em;
+		padding: 1.5em 0;
+		border-left: 1px solid $blue;
+		min-height: 180px;
 	}
 
-	.event-details section{
-		margin-top: 5em;
-		width: 33.33%;
-		float: left;
-		padding: 0 1.5em;
-		border-left: 1px solid $blue;
-		min-height: 210px;
-
+	.event-poster-section {
+	  margin-top: 5em;
 	}
 
 	.event-details section.event-location-section {
@@ -109,17 +142,26 @@
 }
 
 @media only screen and (min-width: 1030px) { /* Desktop */
+	.event-section {
+		margin: 0 0 4em 0;
+	}
 
 	.event-details section {
-	  padding: 0 3.5em;
+	  padding: 1.5em 2em;
 	  min-height: 160px;
+	}
+
+	.event-poster-section {
+	  img {
+	    width: 55%;
+	    max-width: 55%;
+	  }
 	}
 
 }
 
 @media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
 	.event-details section {
-	  padding: 0 3.5em;
 	  min-height: 100px;
 	}
 }

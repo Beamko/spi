@@ -107,12 +107,7 @@ function loadGravatars() {
 */
 jQuery(document).ready(function($) {
 
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
-  loadGravatars();
-
+  $(document).foundation();
 
   var spi = {},
       stickyNavLoaded = false;

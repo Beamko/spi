@@ -3,64 +3,83 @@
 {% block content %}
 <article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="article-header row">
-        <h5 class="category-pre-header">Past Event</h5>
-        <h1 class="page-title large-5 column large-centered small-centered">{{post.title}}</h1>
+    <header class="article-header no-subnav row">
+<!--         <h5 class="category-pre-header">Past Event</h5> -->
+        <h1 class="page-title large-7 column large-centered small-centered">{{post.title}}</h1>
     </header>
 
-      <div class="event-details clearfix">
+      <div class="event-details row clearfix" data-equalizer>
 
-          <section class="event-location-section">
+          <section class="large-4 medium-4 column event-location-section" data-equalizer-watch>
               <h4>Location</h4>
-              <p class="info-text"> {{post.get_field('location')}}</p>
+              {{post.get_field('location')}}
           </section>
 
-          <section class="event-schedule-section">
+          <section class="large-4 medium-4 column event-schedule-section" data-equalizer-watch>
               <h4>Date &amp; Time</h4>
-              <p class="info-text">{{start_date}} &mdash; {{end_date}}</p>
+              <p class="info-text">
+              {% if post.reoccurs %}
+                {{ post.start_date }} &mdash; {{ post.end_date }}
+              {% else %}
+                  {% if post.one_day %}
+                    {{ post.start_date }}
+                    {% if not all_day_event %}
+                      <br/>
+                      {{ post.start_time }} &mdash; {{ post.end_time }}
+                    {% endif %}
+                  {% else %}
+                    {{ post.start_date }} &mdash; {{ post.end_date }}
+                  {% endif %}
+              {% endif %}
+              {% if post.date_time_info %}
+                <br/>
+                {{ post.get_field('date_time_info') }}
+              {% endif %}
+              </p>
           </section>
 
-          <section class="event-ticket-section">
-              <h4>Registration</h4>
-              <p class="info-text">
+          <section class="large-4 medium-4 column event-ticket-section" data-equalizer-watch>
               {% if post.free_event == 'No' %}
-                  {{post.ticket_cost}}<br/>
+                <h4>Tickets: ${{post.ticket_cost}}</h4>
               {% else %}
-                This is a Free Event<br/>
+                <h4>Free Event</h4>
               {% endif %}
-              {{post.ticket_info}}</p>
+              {{post.get_field('ticket_info')}}
           </section>
 
         </div>
 
-        <section class="event-poster-section entry-content">
+        {% if post.get_field('event_image') %}
+        <section class="event-poster-section event-section">
           <img src="{{TimberImage(post.get_field('event_image')).src}}" />
-          <!--<img src="{{post.thumbnail.src}}" />-->
         </section>
+        {% endif %}
 
-        <section class="event-content-main entry-content" itemprop="articleBody">
+        {% if post.get_field('event_description') %}
+        <section class="event-content-main event-section" itemprop="articleBody">
             <h2>Event Description</h2>
-            <div>{{post.content}}</div>
-        </section>
-
-        {% if post.get_field('event_schedule') %}
-        <section class="event-schedule-section entry-content">
-            <h4>Schedule</h4>
-            <div>{{post.get_field('event_schedule')}}</div>
+            <div>{{post.get_field('event_description')}}</div>
         </section>
         {% endif %}
 
         {% if post.get_field('moderator') %}
-        <section class="event-moderator-section entry-content">
-            <h4>Moderator</h4>
+        <section class="event-moderator-section event-section">
+            <h3>Moderator</h3>
             <div>{{post.get_field('moderator')}}</div>
         </section>
         {% endif %}
 
         {% if post.get_field('sponsorship') %}
-        <section class="event-sponsorship-section entry-content">
-            <h4>Sponsorship</h4>
+        <section class="event-sponsorship-section event-section">
+            <h3>Sponsorship</h3>
             <div>{{post.get_field('sponsorship')}}</div>
+        </section>
+        {% endif %}
+
+        {% if post.get_field('event_schedule') %}
+        <section class="event-schedule-section event-section">
+            <h2>Schedule</h2>
+            <div>{{post.get_field('event_schedule')}}</div>
         </section>
         {% endif %}
 
