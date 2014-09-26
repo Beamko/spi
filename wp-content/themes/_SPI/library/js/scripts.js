@@ -130,7 +130,13 @@ jQuery(document).ready(function($) {
     $container.isotope({
       // options
       itemSelector: '.item',
-      layoutMode: 'fitRows'
+      layoutMode: 'fitRows',
+        hiddenStyle: {
+        opacity: 0
+      },
+      visibleStyle: {
+        opacity: 1
+      }
     });
   }
 

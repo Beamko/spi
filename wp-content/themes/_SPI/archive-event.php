@@ -16,6 +16,10 @@ $context['events'] = Timber::get_post(34);
 
 $context['posts'] = Timber::get_posts();
 
+$context['has_upcoming'] = false;
+$context['has_past'] = false;
+$context['has_ongoing'] = false;
+
 foreach ($context['posts'] as $post){
 	$date_only = 'yymmdd';
 	$year_month = 'yymm';
@@ -56,15 +60,18 @@ foreach ($context['posts'] as $post){
 // Set Classes for filtering events
 	$post->status  = '';
 	if ( $current_time > eo_get_the_start('U') and  $current_time < eo_get_the_end('U')){
-		$post->status .= 'js-ongoing '; 
+		$post->status .= 'js-ongoing ';
+		$context['has_ongoing'] = true;
 	}
 
 	if ($current_time < eo_get_the_end('U')){
-		$post->status .= 'js-upcoming '; 
+		$post->status .= 'js-upcoming ';
+		$context['has_upcoming'] = true;
 	}
 
 	if ($current_time > eo_get_the_end('U')){
-		$post->status .= 'js-past '; 
+		$post->status .= 'js-past ';
+		$context['has_past'] = true;
 	}
 }
 
