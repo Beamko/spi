@@ -31,12 +31,8 @@ foreach ($context['posts'] as $post){
 	$current_time = time();
 
 	$post->one_day = false;
-	$post->reoccurs = false;
 
-	if (eo_reoccurs()) {
-		$post->reoccurs = true;
-
-	} else if ( eo_get_the_end($date_only) ==  eo_get_the_start($date_only) ) {
+	if ( eo_get_the_end($date_only) ==  eo_get_the_start($date_only) ) {
 		// If one-day event
 	  $post->one_day = true;
 	  $post->start_date =  eo_get_the_start($display_format);
@@ -56,20 +52,22 @@ foreach ($context['posts'] as $post){
 	  $post->end_date = eo_get_the_end($display_format);
 	}
 
+	$post->ongoing = false;
 
 // Set Classes for filtering events
 	$post->status  = '';
 	if ( $current_time > eo_get_the_start('U') and  $current_time < eo_get_the_end('U')){
 		$post->status .= 'js-ongoing ';
+		$post->ongoing = true;
 		$context['has_ongoing'] = true;
 	}
 
-	if ($current_time < eo_get_the_end('U')){
+	if ( $current_time < eo_get_the_end('U') ){
 		$post->status .= 'js-upcoming ';
 		$context['has_upcoming'] = true;
 	}
 
-	if ($current_time > eo_get_the_end('U')){
+	if ( $current_time > eo_get_the_end('U') ){
 		$post->status .= 'js-past ';
 		$context['has_past'] = true;
 	}
