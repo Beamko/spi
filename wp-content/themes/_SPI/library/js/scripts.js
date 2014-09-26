@@ -128,15 +128,8 @@ jQuery(document).ready(function($) {
     $container = $('.js-isotope');
 
     $container.isotope({
-      // options
       itemSelector: '.item',
-      layoutMode: 'fitRows',
-        hiddenStyle: {
-        opacity: 0
-      },
-      visibleStyle: {
-        opacity: 1
-      }
+      layoutMode: 'fitRows'
     });
   }
 
