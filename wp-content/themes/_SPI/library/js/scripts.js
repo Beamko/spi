@@ -113,6 +113,7 @@ jQuery(document).ready(function($) {
       stickyNavLoaded = false;
 
   spi.init = function () {
+    spi.setUpIsotope();
     spi.stickyNav();
     spi.mobileMenus();
     spi.scrollToSection();
@@ -121,6 +122,16 @@ jQuery(document).ready(function($) {
     spi.searchSite();
 
     $(window).on("resize", spi.stickyNav);
+  }
+
+  spi.setUpIsotope = function () {
+    $container = $('.js-isotope');
+
+    $container.isotope({
+      // options
+      itemSelector: '.item',
+      layoutMode: 'fitRows'
+    });
   }
 
   spi.stickyNav = function () {
@@ -164,34 +175,27 @@ jQuery(document).ready(function($) {
     $('.js-filter-all').on('click', function (e) {
       e.preventDefault();
 
-      $('.js-event-item').fadeIn();
-
+      $container.isotope({ filter: '.js-event-item' });
     }); 
 
     $('.js-filter-upcoming').on('click', function (e) {
       e.preventDefault();
 
-      $('.js-event-item').fadeOut(300, function () {
-        $('.js-upcoming').fadeIn(300);
-      });
-
+      $container.isotope({ filter: '.js-upcoming' });
+      
     }); 
 
     $('.js-filter-past').on('click', function (e) {
       e.preventDefault();
 
-      $('.js-event-item').fadeOut(300, function () {
-        $('.js-past').fadeIn(300);
-      });
+      $container.isotope({ filter: '.js-past' });
 
     }); 
 
     $('.js-filter-ongoing').on('click', function (e) {
       e.preventDefault();
 
-      $('.js-event-item').fadeOut(300, function () {
-        $('.js-ongoing').fadeIn(300);
-      });
+      $container.isotope({ filter: '.js-ongoing' });
 
     }); 
   }

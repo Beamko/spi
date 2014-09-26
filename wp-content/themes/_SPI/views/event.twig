@@ -22,8 +22,8 @@
                 {{ post.start_date }} &mdash; {{ post.end_date }}
               {% else %}
                   {% if post.one_day %}
-                    {{ post.event_date }}
-                    {% if not all_day_event %}
+                    {{ post.event_date}}
+                    {% if not post.all_day_event %}
                       <br/>
                       {{ post.start_time }} &mdash; {{ post.end_time }}
                     {% endif %}

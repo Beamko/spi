@@ -4,8 +4,7 @@
 	//Get events
 	$query_args = array(
 		'posts_per_page' => -1,
-		'meta_key' => 'start_date',
-		'orderby'	=> 'meta_value_num',
+		'orderby'	=> 'eventend',
 		'order' => 'DESC',
 		'post_type' => 'event'
 	);
@@ -47,24 +46,26 @@ foreach ($context['posts'] as $post){
 		// If same year
 	  $post->start_date =  eo_get_the_start($month_and_date_only);
 	  $post->end_date = eo_get_the_end($display_format);
-	  
+
 	} else {
 	  $post->start_date =  eo_get_the_start($display_format);
 	  $post->end_date = eo_get_the_end($display_format);
 	}
 
-	// $post->status  = '';
-	// if ($post->get_field('repeat_event') === 'Yes'){
-	// 	$post->status .= 'js-ongoing '; 
-	// }
 
-	// if ($current_time < $end_date){
-	// 	$post->status .= 'js-upcoming '; 
-	// }
+// Set Classes for filtering events
+	$post->status  = '';
+	if ( $current_time > eo_get_the_start('U') and  $current_time < eo_get_the_end('U')){
+		$post->status .= 'js-ongoing '; 
+	}
 
-	// if ($current_time > $end_date){
-	// 	$post->status .= 'js-past '; 
-	// }
+	if ($current_time < eo_get_the_end('U')){
+		$post->status .= 'js-upcoming '; 
+	}
+
+	if ($current_time > eo_get_the_end('U')){
+		$post->status .= 'js-past '; 
+	}
 }
 
 Timber::render('events.twig', $context);

@@ -27,7 +27,7 @@ $post->reoccurs = false;
 $post->all_day_event = true;
 
 if (!eo_is_all_day()) {
-	$post->all_day = false;
+	$post->all_day_event = false;
 	$post->start_time = eo_get_the_start($time_only);
 	$post->end_time = eo_get_the_end($time_only);
 }
