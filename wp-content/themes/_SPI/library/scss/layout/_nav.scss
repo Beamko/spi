@@ -120,24 +120,26 @@
     }
 
     #about-item,
-    #projects-item,
+    #blog-item,
     #events-item,
     #search-item { display:block; }
 
     #about-item,
-    #projects-item { text-align: left; }
+    #events-item { text-align: left; }
 
-    #events-item,
+    #blog-item,
     #search-item { text-align: right; }
 
     #home-item {
       overflow: hidden;
       width: 20%;
-      min-height: 40px;
       text-align: center;
-      text-indent: 999px;
-      background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 12px;
-      background-size: 30px 30px;
+      a {
+        min-height: 40px;
+        background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 12px;
+        background-size: 30px 30px;
+      }
+
     }
 
     li {
