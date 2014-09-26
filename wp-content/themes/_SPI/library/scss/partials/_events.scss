@@ -81,6 +81,7 @@
 /* Event detail section - Ticket info, date and time, location */
 .event-details {
 	border-top: 1px solid $blue;
+	margin-bottom: 3em;
 	.info-text {
 	  text-align: center;
 	}
@@ -111,7 +112,6 @@
 
 /* Event poster section */
 .event-poster-section {
-  margin-top: 3em;
   img {
   	@include shadow;
   	margin: 0 0 1em 0;
@@ -125,20 +125,19 @@
 
 @media only screen and (min-width: 641px) { /* Tablets, smaller laptops */
 
-	.event-details section {
-		margin-top: 2.5em;
-		padding: 1.5em 0;
-		border-left: 1px solid $blue;
-		min-height: 180px;
+	.event-details {
+		margin-bottom: 5em;
+		section {
+			margin-top: 2.5em;
+			padding: 1.5em 0;
+			border-left: 1px solid $blue;
+			min-height: 180px;
+		}
+		.event-location-section {
+			border: none;
+		}
 	}
 
-	.event-poster-section {
-	  margin-top: 5em;
-	}
-
-	.event-details section.event-location-section {
-		border: none;
-	}
 }
 
 @media only screen and (min-width: 1030px) { /* Desktop */

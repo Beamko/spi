@@ -13,12 +13,12 @@
     </header>
 
     <div id="content">
-        <div id="inner-content" class="wrap cf">
+        <div id="inner-content" class="cf">
             <div id="main" data-masonry-options='{ "itemSelector": ".item" }'class="js-masonry m-all t-2of3 d-5of7 cf row" role="main">
 
                 {% for post in posts %}          
 
-                    <article class="js-event-item item post-type-{{post.post_type}} large-4 small-12 column {{post.status}}" id="post-{{post.ID}}">
+                    <article class="js-event-item item post-type-{{post.post_type}} large-4 medium-6 small-12 column {{post.status}}" id="post-{{post.ID}}">
                         <section class="article-content event-item-wrapper">
                             {% if post.reoccurs %}
                                 <div class="info-text">Ongoing</div>

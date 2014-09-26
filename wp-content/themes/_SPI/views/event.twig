@@ -15,14 +15,14 @@
               {{post.get_field('location')}}
           </section>
 
-          <section class="large-4 medium-4 column event-schedule-section" data-equalizer-watch>
+          <section class="large-4 medium-4 column" data-equalizer-watch>
               <h4>Date &amp; Time</h4>
               <p class="info-text">
               {% if post.reoccurs %}
                 {{ post.start_date }} &mdash; {{ post.end_date }}
               {% else %}
                   {% if post.one_day %}
-                    {{ post.start_date }}
+                    {{ post.event_date }}
                     {% if not all_day_event %}
                       <br/>
                       {{ post.start_time }} &mdash; {{ post.end_time }}
@@ -56,30 +56,36 @@
         {% endif %}
 
         {% if post.get_field('event_description') %}
-        <section class="event-content-main event-section" itemprop="articleBody">
+        <section class="event-section" itemprop="articleBody">
             <h2>Event Description</h2>
             <div>{{post.get_field('event_description')}}</div>
         </section>
         {% endif %}
 
         {% if post.get_field('moderator') %}
-        <section class="event-moderator-section event-section">
+        <section class="event-section">
             <h3>Moderator</h3>
             <div>{{post.get_field('moderator')}}</div>
         </section>
         {% endif %}
 
         {% if post.get_field('sponsorship') %}
-        <section class="event-sponsorship-section event-section">
+        <section class="event-section">
             <h3>Sponsorship</h3>
             <div>{{post.get_field('sponsorship')}}</div>
         </section>
         {% endif %}
 
         {% if post.get_field('event_schedule') %}
-        <section class="event-schedule-section event-section">
+        <section class="event-section">
             <h2>Schedule</h2>
             <div>{{post.get_field('event_schedule')}}</div>
+        </section>
+        {% endif %}
+
+        {% if post.get_field('additional_event_info') %}
+        <section class="event-section">
+            <div>{{post.get_field('additional_event_info')}}</div>
         </section>
         {% endif %}
 
