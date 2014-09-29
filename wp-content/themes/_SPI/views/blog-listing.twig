@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="article-header row">
+
+        <h1 class="page-title large-7 column large-centered small-centered">{{blog.page_title}}</h1>
+
+        <div id="subnav" class="subnav">
+            {% include 'blog-nav.twig' %}
+        </div>
+
+    </header>
+
+    {% for post in posts %}
+        {% include "blog-listing-item.twig" %}
+    {% endfor %}
+
+</article>
+
+{% endblock %}
