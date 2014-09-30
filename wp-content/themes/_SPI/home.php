@@ -10,8 +10,6 @@ $posts = Timber::get_posts();
 
 $posts['author'] = get_the_author();
 
-
-
 $context['posts'] = $posts;
 
 Timber::render('blog-listing.twig', $context);

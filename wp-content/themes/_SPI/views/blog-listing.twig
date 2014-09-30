@@ -14,9 +14,11 @@
 
     </header>
 
-    {% for post in posts %}
-        {% include "blog-listing-item.twig" %}
-    {% endfor %}
+    <div class="row js-isotope">
+        {% for post in posts %}
+            {% include "blog-listing-item.twig" %}
+        {% endfor %}
+    </div>
 
 </article>
 

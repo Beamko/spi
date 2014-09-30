@@ -1,19 +1,22 @@
-<article id="post-{{post.ID}}" class="post-{{post.ID}} post type-post status-publish format-standard hentry category-uncategorized cf" role="article">
+<div class="large-4 columns item">
+    <article id="post-{{post.ID}}" class="post-{{post.ID}} post type-post status-publish format-standard hentry category-uncategorized cf" role="article">
 
-<!-- {{post|print_r}} -->
+    <!-- {{post|print_r}} -->
+        <p class="info-text">{{post.display_date}}</p>
 
-    <header class="article-header">
         <h1 class="h2 entry-title"><a href="{{post.get_path}}" rel="bookmark" title="{{post.post_title}}">{{post.post_title}}</a></h1>
-    </header>
 
-    {% if post.get_field('featured_image') %}
-        <img class="headshot" src="{{post.get_field('featured_image')}}" alt="post image">
-    {% endif %}
-    {{post.author}}
-    {{post.display_date}}
-    <section class="entry-content cf">
-        <p>{{post.get_content}}</p>
-    </section>
+        <p class="info-text">{{post.author}}</p>
+
+        {% if post.get_field('featured_image') %}
+            <img class="headshot" src="{{post.get_field('featured_image')}}" alt="post image">
+        {% endif %}
 
 
-</article>
+        <section class="entry-content cf">
+            <p>{{post.get_content}}</p>
+        </section>
+
+
+    </article>
+</div>
