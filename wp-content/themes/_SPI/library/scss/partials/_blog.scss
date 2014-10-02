@@ -40,14 +40,14 @@
 	S I N G L E   B L O G   P O S T   P A G E
 ------------------------------------------------------------- */
 .blog-header {
-	margin-bottom: 3.8em;
-	padding-bottom: 3em;
+	margin-bottom: 2.8em;
+	padding-bottom: 2em;
 	border-bottom: 1px solid $blue;
 	.page-title {
 		margin-bottom: 0.3em;
 	}
 	h4 {
-		margin: 0 0 .13em 0;
+		margin: 0 0 .16em 0;
 	}
 }
 
@@ -72,6 +72,11 @@
 }
 
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+.blog-header {
+	margin-bottom: 3.8em;
+	padding-bottom: 3em;
+}
+
 .blog-list-item {
 	.h5 {
 		max-width: 80%;
