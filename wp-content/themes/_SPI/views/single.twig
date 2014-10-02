@@ -22,15 +22,15 @@
             {% endfor %}
 
             <section class="comments">
-
-                <div class="responses">
+                {% if post.get_comments() %}
+                <div class="post-section responses">
                     <h3 class="h2">Comments</h3>
                     {% for comment in post.get_comments() %}
                         {% include "comment.twig" with {comment: comment} %}
                     {% endfor %}
                 </div>
-
-                <div class="respond">
+                {% endif %}
+                <div class="post-section respond">
                     <h3 class="h2">Write a Comment</h3>
                     {{ comment_form }}
                 </div>
