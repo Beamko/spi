@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tested up to: 4.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Stable Tag: 1.5.1
+Stable Tag: 1.5.2
 
 == Description ==
 
@@ -36,11 +36,17 @@ This is an example. Please note, that you can customize the shortcode you want t
 3. Your awesome text`<fn>`with an awesome footnote`</fn>`
 4. Your awesome text `custom-shortcode` with an awesome footnote `custom-shortcode`
 
+= Where to get footnotes? =
 The current version is available on wordpress.org:
 http://downloads.wordpress.org/plugin/footnotes.zip
 
-Development of the plugin is an open process. Latest code is available on wordpress.org, please report feature requests and bugs on GitHub:
-https://github.com/media-competence-institute/footnotes
+= Support =
+Please report feature requests, bugs and other support related questions in the WordPress Forums at https://wordpress.org/support/plugin/footnotes
+
+Speak your mind, unload your burdens. Notice how we screwed up big time? Bring it to our attention in the above mentioned WordPress Forums. Be polite, though :)
+
+= Development =
+Development of the plugin is an open process. Latest code is available on wordpress.org
 
 == Frequently Asked Questions ==
 
@@ -53,6 +59,12 @@ No, this Plugin has been written from scratch. Of course some inspirations on ho
 1. For anyone interested in converting from the FD Footnotes plugin:
 Visit this swift write-up from a **footnotes** user by the name of **Southwest**: http://wordpress.org/support/topic/how-to-make-this-footnote-style?replies=6#post-5946306
 2. From what we've researched, all other footnotes Plugins use open and close shortcodes, which can be left as is. In the **footnotes** settings menu, you can setup **footnotes** to use the existing (=previously used) shortcodes. Too easy? Yippy Ki-Yey!
+= I'm happy with how the Plugin works =
+1. Pour a glass of your favourite beverage
+2. Take a deep breath
+3. Donate whatever amount you think is appropriate here: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6Z6CZDW8PPBBJ
+4. Enjoy how you just made a bunch of young folks even more enthusiastic about developing useful stuff
+5. Now it's time to empty that glass in one go
 
 == Installation ==
 - Visit your WordPress Admin area
@@ -72,8 +84,18 @@ Visit this swift write-up from a **footnotes** user by the name of **Southwest**
 
 == Changelog ==
 
-= 1.5.1 =
+= 1.5.2 =
+- Add: Setting to enable/disable the mouse-over box
+- Add: Current WordPress Theme to the Diagnostics sub page
+- Add: ManFisher note in the "other Plugins" sub page
+- Update: Removed unnecessary hidden inputs from the Settings page
+- Update: Merged public CSS files to reduce the output and improve the performance
+- Update: Translations (EN and DE)
+- Bugfix: Removed the 'trim' function to allow whitespaces at the beginning and end of each setting
+- Bugfix: Convert the footnotes short code to HTML special chars when adding them into the page/post editor (visual and text)
+- Bugfix: Detailed error messages if other Plugins can't be loaded. Also added empty strings as default values to avoid 'undefined'
 
+= 1.5.1 =
 - Bugfix: Broken Settings link in the Plugin listing
 - Bugfix: Translation overhaul for German
 

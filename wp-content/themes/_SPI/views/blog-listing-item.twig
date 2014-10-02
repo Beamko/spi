@@ -1,10 +1,9 @@
-<div class="large-4 columns item">
+<div class="large-4 columns item blog-list-item">
     <article id="post-{{post.ID}}" class="post-{{post.ID}} post type-post status-publish format-standard hentry category-uncategorized cf" role="article">
 
-    <!-- {{post|print_r}} -->
         <p class="info-text">{{post.display_date}}</p>
 
-        <h1 class="h2 entry-title"><a href="{{post.get_path}}" rel="bookmark" title="{{post.post_title}}">{{post.post_title}}</a></h1>
+        <h1 class="h5 entry-title"><a href="{{post.get_path}}" rel="bookmark" title="{{post.post_title}}">{{post.post_title}}</a></h1>
 
         <p class="info-text">{{post.author}}</p>
 
@@ -13,10 +12,9 @@
         {% endif %}
 
 
-        <section class="entry-content cf">
+        <section class="cf">
             <p>{{post.get_content}}</p>
         </section>
-
 
     </article>
 </div>

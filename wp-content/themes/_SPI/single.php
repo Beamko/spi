@@ -4,6 +4,8 @@ $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
 $context['wp_title'] .= ' - ' . $post->title();
+$context['categories'] = get_the_category();
+
 $context['comment_form'] = TimberHelper::get_comment_form();
 
 if (post_password_required($post->ID)){
