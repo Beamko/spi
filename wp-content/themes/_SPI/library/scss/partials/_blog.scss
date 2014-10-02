@@ -2,18 +2,66 @@
 -------------------------------------------------------------
 	B L O G   L I S T I N G   P A G E
 ------------------------------------------------------------- */
+.blog-list-item {
+	.h5 {
+		margin: 0 0 .07em;
+	}
+	.display-date,
+	.author {
+		@extend .info-text;
+	}
+	.display-date {
+		margin-bottom: 0.4em;
+	}
+	.author {
+		font-family: $headline;
+	  font-weight:       700;
+	  text-transform:    none;
+	  letter-spacing:    0.05em;
+	}
+}
 
+.post-summary {
+	@include hyphenate;
+}
 
-
+/* Hide footnotes from archive page */
+.blog-list-item {
+	.footnote_container_prepare,
+	.footnote_plugin_tooltip_text,
+	#footnote_references_container {
+		display: none !important;
+	}
+}
 
 
 @media only screen and (min-width: 481px) {
+  .post-summary p {
+    font-size: 22px;
+    line-height: 27px;
+    margin: 0 0 1em 0;
+    text-align: left;
+    text-indent: 1.5em;
+  }
+}
 
-	.blog-list-item {
-	  p {
-	    font-size: 22px;
-	    line-height: 27px;
-	    margin: 0 0 1em 0;
-	  }
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+.blog-list-item {
+	.h5 {
+		max-width: 80%;
+		margin: 0 auto .07em;
 	}
+	img {
+		margin-bottom: 25px;
+	}
+}
+
+}
+
+@media only screen and (min-width: 1030px) { /* Desktop */
+
+}
+
+@media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
+
 }
