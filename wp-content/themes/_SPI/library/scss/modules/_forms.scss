@@ -129,6 +129,9 @@ select {
   .comment-author {
     margin-bottom: 0;
     font-style: normal;
+    &:hover {
+      text-decoration: none;
+    }
   }
   .blog-comment {
     @extend %max-width-section;
