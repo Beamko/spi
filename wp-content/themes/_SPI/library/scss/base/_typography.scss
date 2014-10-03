@@ -154,6 +154,7 @@ h6, .h6 {
 .link, .menu-item {
   font-family:       $links;
   text-transform:    uppercase;
+  text-decoration: none;
   font-weight:       400;
   letter-spacing:    2px;
   color:             $blue;
@@ -317,6 +318,12 @@ h6, .h6 {
   .link, .menu-item {
     font-size:         20px;
     line-height:       38px;
+  }
+
+  .small-text {
+    font-size:         22px;
+    line-height:       27px;
+    margin:            0 0 1em 0;
   }
 
 }

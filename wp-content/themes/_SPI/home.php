@@ -1,7 +1,5 @@
 <?php
-/*
- Template Name: Blog Posts
-*/
+
 
 $context = array();
 $context['blog'] = Timber::get_post(527);

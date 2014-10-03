@@ -1,4 +1,6 @@
 <div class="blog-comment {{comment.comment_type}}" id="blog-comment-{{comment.ID}}">
-	<h5 class="comment-author">{{comment.author.name}} says</h5>
+	<h5 class="comment-author link">{{comment.author.name}}</h5>
+	<p class="info-text comment-date">{{comment.comment_date|date('F j, Y \\a\\t h:i:s a')}}</p>
+	<span class="icon-asterisk">*</span>
 	<div class="comment-content">{{comment.comment_content|wpautop}}</div>
 </div>
