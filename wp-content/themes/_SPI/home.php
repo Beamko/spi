@@ -1,7 +1,7 @@
 <?php
 
 
-$context = array();
+$context = Timber::get_context();
 $context['blog'] = Timber::get_post(527);
 
 $posts = Timber::get_posts();
