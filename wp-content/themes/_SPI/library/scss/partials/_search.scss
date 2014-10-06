@@ -10,3 +10,33 @@
 -------------------------------------------------------------
   S E A R C H   R E S U L T S
 ------------------------------------------------------------- */
+
+
+/* Header section */
+.search-header {
+	margin-bottom: 80px;
+}
+
+.search-page-title {
+	@extend .page-title;
+	margin-bottom: 0;
+	padding-bottom: 50px;
+	border-bottom: 1px solid $blue;
+}
+
+
+/* Search Items */
+.search-item {
+	max-width: 830px;
+	margin: 0 auto 65px;
+	p {
+		@extend %article-text;
+		display: inline;
+		text-align: left;
+	}
+	.article-content {
+		text-align: left;
+	}
+}
+
+

@@ -1,0 +1,46 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div id="content search-page">
+
+    <div id="inner-content" class="wrap cf">
+
+        <div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+            <header class="search-header">
+                <h1 class="search-page-title">Searching for: <span>freud</span></h1>
+            </header>
+
+            {% for post in posts %}          
+
+                <article class="search-item post-type-{{post.post_type}}" id="post-{{post.ID}}" role="article">
+
+                    <header>
+                        {% if post.post_parent != 0 %}
+                            <span>{{post.parent.post_title}}</span>
+                        {% elseif post.post_type == 'event' %}
+                            <span>Events</span>
+                        {% elseif post.post_type == 'post' %}
+                            <span>Blog</span>
+                        {% else %}
+                            <span>{{post.post_type}}</span>
+                        {% endif %}
+                        <h4 class="search-title"><a href="{{post.permalink}}" rel="bookmark" title="{{post.post_title}}">{{post.post_title}}</a></h4>
+
+                    </header>
+
+                    <section class="article-content">
+                        {{post.post_excerpt}}
+                    </section>
+
+                </article>
+            {% endfor %}
+
+        </div>
+
+    <?php get_sidebar(); ?>
+
+    </div>
+
+</div>
+
+{% endblock %}

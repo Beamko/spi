@@ -39,6 +39,7 @@ p {
   margin:            0 0 1em 0;
 }
 
+%article-text,
 .article-content p,
 .entry-content p {
   text-indent:       2em;
@@ -178,7 +179,7 @@ h6, .h6 {
     margin:            0 0 1em 0;
   }
 
-  .article-content p, .entry-content p { text-indent: 3em; }
+  %article-text, .article-content p, .entry-content p { text-indent: 3em; }
   .article-content .wp-caption-text, .entry-content .wp-caption-text { text-indent: 0; }
 
   h1, .h1 {
