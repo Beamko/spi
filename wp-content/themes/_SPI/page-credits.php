@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Donations Page
+ Template Name: Credits Page
 */
 
 $context = Timber::get_context();
