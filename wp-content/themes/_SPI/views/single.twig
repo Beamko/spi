@@ -18,17 +18,16 @@
             </section>
 
             {% if post.get_field('footnotes') %}
-                <section class="post-section">
+                <section class="post-section footnotes-section">
                     {% for footnote in post.get_field('footnotes') %}
-                        <span>{{ footnote.number }}</span> {{ footnote.footnote_text }}
+                        <strong>{{ footnote.number }}</strong>. {{ footnote.footnote_text }}
                     {% endfor %}
                 </section>
             {% endif %}
 
             {% for category in categories %}
-                 <!-- {{category|print_r}}  -->
                 {% if category.name != 'Uncategorized' %}
-                    <a href="{{site.url}}/category/{{category.slug}}" class="tag">{{ category.name }}</a>
+                    <a href="{{site.url}}/category/{{category.slug}}" class="category-tag">{{ category.name }}</a>
                 {% endif %}
             {% endfor %}
 

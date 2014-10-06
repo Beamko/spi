@@ -18,7 +18,7 @@
 
         {% for category in post.terms('category') %}
             {% if category.name != 'Uncategorized' %}
-                <a href="{{category.link}}" class="tag">{{ category.name }}</a>
+                <a href="{{category.link}}" class="category-tag">{{ category.name }}</a>
             {% endif %}
         {% endfor %}
 

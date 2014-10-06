@@ -56,6 +56,17 @@
 	border-top: 1px solid $blue;
 }
 
+.category-tag {
+	@extend %tag;
+}
+
+/* Footnotes */
+.footnotes-section {
+	p {
+		@extend .info-text;
+		display: inline;
+	}
+}
 
 
 
@@ -89,6 +100,14 @@
 	}
 	img {
 		margin-bottom: 25px;
+	}
+}
+
+.footnotes-section {
+	div {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
 	}
 }
 
