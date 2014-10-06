@@ -10,3 +10,52 @@
 -------------------------------------------------------------
   S E A R C H   R E S U L T S
 ------------------------------------------------------------- */
+
+/* Header section */
+.search-header {
+	margin-bottom: 2.5em;
+}
+
+.search-page-title {
+	@extend .page-title;
+	margin-bottom: 0;
+	padding-bottom: 50px;
+	border-bottom: 1px solid $blue;
+}
+
+
+/* Search Items */
+.search-item {
+	max-width: 830px;
+	margin: 0 auto 2em;
+	p {
+		@extend %article-text;
+		display: inline;
+		text-align: left;
+	}
+	.article-content {
+		text-align: left;
+	}
+}
+
+
+@media only screen and (min-width: 481px) { /* Larger Mobile Devices */
+
+}
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+	.search-header {
+		margin-bottom: 5em;
+	}
+	.search-item {
+		margin: 0 auto 4em;
+	}
+}
+
+@media only screen and (min-width: 1030px) { /* Desktop */
+
+}
+
+@media only screen and (min-width: 1300px) { /* Larger monitors, full screen viewers */
+
+}

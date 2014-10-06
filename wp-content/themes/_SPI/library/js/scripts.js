@@ -241,7 +241,7 @@ jQuery(document).ready(function($) {
   }
 
   spi.searchSite = function () {
-    $('#search-item').click(function (e) {
+    $('.js-open-search').click(function (e) {
       e.preventDefault();
       //_gaq.push(['_trackEvent', 'mobile-nav', 'toggle']);
       $('.js-search-modal').slideToggle('fast');
