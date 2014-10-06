@@ -4,8 +4,7 @@
 	//Get events
 	$query_args = array(
 		'posts_per_page' => -1,
-		'meta_key' => 'start_date',
-		'orderby'	=> 'meta_value_num',
+		'orderby'	=> 'eventend',
 		'order' => 'DESC',
 		'post_type' => 'event'
 	);
@@ -17,41 +16,60 @@ $context['events'] = Timber::get_post(34);
 
 $context['posts'] = Timber::get_posts();
 
+$context['has_upcoming'] = false;
+$context['has_past'] = false;
+$context['has_ongoing'] = false;
+
 foreach ($context['posts'] as $post){
 	$date_only = 'yymmdd';
 	$year_month = 'yymm';
 	$month_and_date_only = 'F j';
 	$date_and_year_only = 'j, Y';
+	$year_only = 'Y';
 	$display_format = 'F j, Y';
 
-	$start_date = $post->get_field('start_date');
-	$end_date = $post->get_field('end_date');
 	$current_time = time();
 
-	if (date_i18n( $date_only, $end_date ) ==  date_i18n( $date_only, $start_date )) {
-		// If same date
-	  $post->start_date =  date_i18n( $month_and_date_only, $start_date );
-	  $post->end_date = date_i18n( $date_and_year_only, $end_date );
-	} elseif (date_i18n( $year_month, $end_date ) ==  date_i18n( $year_month, $start_date )) {
+	$post->one_day = false;
+
+	if ( eo_get_the_end($date_only) ==  eo_get_the_start($date_only) ) {
+		// If one-day event
+	  $post->one_day = true;
+	  $post->start_date =  eo_get_the_start($display_format);
+
+	} elseif (eo_get_the_end($year_month) == eo_get_the_start($year_month)) {
 		// If same month and year
-	  $post->start_date =  date_i18n( $month_and_date_only, $start_date );
-	  $post->end_date = date_i18n( $date_and_year_only, $end_date );
+	  $post->start_date =  eo_get_the_start($month_and_date_only);
+	  $post->end_date = eo_get_the_end($date_and_year_only);
+
+	} elseif (eo_get_the_end($year_only) == eo_get_the_start($year_only)) {
+		// If same year
+	  $post->start_date =  eo_get_the_start($month_and_date_only);
+	  $post->end_date = eo_get_the_end($display_format);
+
 	} else {
-	  $post->end_date = date_i18n( $display_format, $end_date );
-	  $post->start_date =  date_i18n( $display_format, $start_date );
+	  $post->start_date =  eo_get_the_start($display_format);
+	  $post->end_date = eo_get_the_end($display_format);
 	}
 
+	$post->ongoing = false;
+
+// Set Classes for filtering events
 	$post->status  = '';
-	if ($post->get_field('repeat_event') === 'Yes'){
-		$post->status .= 'js-ongoing '; 
+	if ( $current_time > eo_get_the_start('U') and  $current_time < eo_get_the_end('U')){
+		$post->status .= 'js-ongoing ';
+		$post->ongoing = true;
+		$context['has_ongoing'] = true;
 	}
 
-	if ($current_time < $end_date){
-		$post->status .= 'js-upcoming '; 
+	if ( $current_time < eo_get_the_end('U') ){
+		$post->status .= 'js-upcoming ';
+		$context['has_upcoming'] = true;
 	}
 
-	if ($current_time > $end_date){
-		$post->status .= 'js-past '; 
+	if ( $current_time > eo_get_the_end('U') ){
+		$post->status .= 'js-past ';
+		$context['has_past'] = true;
 	}
 }
 

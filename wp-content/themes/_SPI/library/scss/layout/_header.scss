@@ -42,6 +42,9 @@ HEADER STYLES
 
 .article-header {
   margin-bottom: 2em;
+  &.no-subnav {
+    margin-bottom: 0;
+  }
 }
 
 #logo {
