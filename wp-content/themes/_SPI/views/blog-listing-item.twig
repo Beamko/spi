@@ -13,8 +13,14 @@
 
 
         <section class="cf post-summary">
-            {{post.get_content}}
+            {{post.get_field('blog_content')}}
         </section>
+
+        {% for category in post.terms('category') %}
+            {% if category.name != 'Uncategorized' %}
+                <a href="{{category.link}}" class="tag">{{ category.name }}</a>
+            {% endif %}
+        {% endfor %}
 
     </article>
 </div>

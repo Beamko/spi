@@ -2,7 +2,9 @@
 
 $context = Timber::get_context();
 $post = new TimberPost();
+
 $context['post'] = $post;
+$context['comment_count'] = get_comments_number();
 $context['wp_title'] .= ' - ' . $post->title();
 $context['categories'] = get_the_category();
 

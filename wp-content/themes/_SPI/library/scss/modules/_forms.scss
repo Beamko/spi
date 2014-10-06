@@ -120,6 +120,9 @@ select {
     display: block;
     margin-bottom: 2.2em;
   }
+  .logged-in-as {
+    @extend .info-text;
+  }
 }
 
 .responses {
