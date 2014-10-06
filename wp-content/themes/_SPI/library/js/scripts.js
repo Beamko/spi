@@ -249,6 +249,7 @@ jQuery(document).ready(function($) {
     $('.js-open-search').click(function (e) {
       e.preventDefault();
       //_gaq.push(['_trackEvent', 'mobile-nav', 'toggle']);
+
       $('.js-search-modal').slideToggle('fast');
     });
 
