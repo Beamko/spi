@@ -11,10 +11,9 @@
   S E A R C H   R E S U L T S
 ------------------------------------------------------------- */
 
-
 /* Header section */
 .search-header {
-	margin-bottom: 80px;
+	margin-bottom: 2.5em;
 }
 
 .search-page-title {
@@ -28,7 +27,7 @@
 /* Search Items */
 .search-item {
 	max-width: 830px;
-	margin: 0 auto 65px;
+	margin: 0 auto 2em;
 	p {
 		@extend %article-text;
 		display: inline;
@@ -40,3 +39,23 @@
 }
 
 
+@media only screen and (min-width: 481px) { /* Larger Mobile Devices */
+
+}
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+	.search-header {
+		margin-bottom: 5em;
+	}
+	.search-item {
+		margin: 0 auto 4em;
+	}
+}
+
+@media only screen and (min-width: 1030px) { /* Desktop */
+
+}
+
+@media only screen and (min-width: 1300px) { /* Larger monitors, full screen viewers */
+
+}
