@@ -127,18 +127,15 @@ jQuery(document).ready(function($) {
   spi.setUpIsotope = function () {
     $container = $('.js-isotope');
 
+    $container.isotope({
+      // options
+      itemSelector: '.item',
+      layoutMode: 'fitRows',
+    });
+
+    // layout Isotope again after all images have loaded
     $container.imagesLoaded( function() {
-      $container.isotope({
-        // options
-        itemSelector: '.item',
-        layoutMode: 'fitRows',
-          hiddenStyle: {
-          opacity: 0
-        },
-        visibleStyle: {
-          opacity: 1
-        }
-      });
+      $container.isotope('layout');
     });
 }
 
