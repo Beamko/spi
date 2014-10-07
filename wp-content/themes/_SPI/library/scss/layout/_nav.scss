@@ -7,7 +7,7 @@
   top: 0;
   display: block;
   width: 100%;
-  background: transparent;
+  background: $page;
 }
 
 .nav {
@@ -20,7 +20,7 @@
   li {
     line-height: 1.5em;
     display: inline-block;
-    padding: 0 .25em;
+    //padding: 0 .25em;
     a {
       display: inline;
       text-decoration: none;
@@ -100,6 +100,7 @@
     ul:first-of-type {
       margin: 0 auto;
       max-width: 1280px;
+      padding: 0 0.5em;
     }
 
     li {
@@ -145,7 +146,7 @@
     li {
       float: left;
       position: relative;
-      margin-top:.5em;
+      margin-top:.2em;
       a {
         border-bottom: 0;
       }
@@ -158,17 +159,48 @@
     padding-top: 1.5em;
     border-bottom: 0;
     li {
-      margin: 0 3em;
+      margin: 0 1.3em;
     }
 
   }
 }
 
-@media only screen and (min-width: 1030px) { /* Desktop */
+@media only screen and (min-width: 900px) { /* Desktop */
 
+  .subnav {
+    ul.nav li {
+      margin: 0 2em;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1050px) { /* Desktop */
+
+  .subnav {
+    ul.nav li {
+      margin: 0 2.5em;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1120px) { /* Larger monitors, full screen viewers */
+
+  .subnav {
+    ul.nav li {
+      margin: 0 3em;
+    }
+  }
 
 }
 
 @media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
+
+  .subnav {
+    ul.nav li {
+      margin: 0 3.5em;
+    }
+  }
 
 }

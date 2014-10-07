@@ -33,27 +33,6 @@ body {
   margin-top: 3.5em;
 }
 
-.feature-block {
-  height: 800px;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100%;
-  text-align: center;
-  z-index: 9;
-
-  .feature-info {
-    width: 40%;
-    background: $page;
-    position: relative;
-    padding: 2em 2em 3em 2em;
-    top: 50%;
-    left: 30%;
-    transform: translateY(-50%);
-    a{text-decoration:none;}
-
-  }
-}
-
 .category-pre-header {
   margin-bottom: .25em;
 }
@@ -68,6 +47,20 @@ body {
   border-bottom: solid 1px $blue;
   margin-bottom: 4em;
 }
+.feature-block {
+  margin-bottom: 3em;
+}
+
+.feature-info {
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+
+
+%max-width-section {
+  max-width: 830px;
+  margin: 0 auto;
+}
 
 
 @media only screen and (min-width: 481px) { /* Larger Mobile Devices */
@@ -79,11 +72,36 @@ body {
 }
 
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+  .feature-block {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    text-align: center;
+    z-index: 9;
+    margin-bottom: 0;
+    h1 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    .feature-info {
+      margin: 0;
+      width: 40%;
+      background: $page;
+      position: relative;
+      padding: 2em 2em 3em 2em;
+      top: 50%;
+      left: 30%;
+      transform: translateY(-50%);
+      a{text-decoration:none;}
+
+    }
+  }
   .wrap {
     width: 760px;
   }
 
-  #container{
+  #container {
     margin: 3em;
     margin-top: 5em;
     margin-bottom: 2em;
@@ -91,6 +109,13 @@ body {
 }
 
 @media only screen and (min-width: 1030px) { /* Desktop */
+  .feature-block {
+    height: 585px;
+    h1 {
+      font-size: 40px;
+      line-height: 45px;
+    }
+  }
 
   .wrap {
     width: 1040px;
@@ -103,7 +128,14 @@ body {
   }
 }
 
-@media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
+@media only screen and (min-width: 1300px) { /* Larger monitors, full screen viewers */
+  .feature-block {
+    height: 800px;
+    h1 {
+      font-size: 66px;
+      line-height: 66px;
+    }
+  }
   .wrap {
     width: 1040px;
   }

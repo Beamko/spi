@@ -10,17 +10,22 @@
   margin-top: 0.8em;
   padding-bottom: 0.8em;
   text-align: center;
+  border-top: solid 1px $blue;
+  padding-top: 2.25em;
 
   .footer-blocks{
     margin-bottom: 2em;
     .footer-block {
       width: 100%;
       float: left;
+      margin-bottom: 1.5em;
       border-left: none;
-      height: 120px;
       text-indent: 0 !important;
       padding: 0 1em;
       h4 { margin-bottom:0.35em;}
+      li.menu-item {
+        margin: 0 .35em;
+      }
 
       nav {
         //float: left;
@@ -30,7 +35,9 @@
         .footer-location ul li {
           color: #808080;
           display:inline-block;
+
         }
+
       }
 
 
@@ -73,17 +80,19 @@
     clear: both;
     background-color: $page;
     color: $blue;
-    margin-top: 6em;
+    margin-top: 2em;
     text-align: center;
+    border-top: none;
+
 
     .footer-blocks{
       margin-bottom: 4em;
       .footer-block {
-        width: 50%;
+        width: 48%;
         float: left;
-        height: 195px;
         border-left: solid 1px $blue;
         padding-top: 2em;
+        margin-bottom: 0em;
       }
       #social-links {
         border-left: none;
@@ -93,51 +102,60 @@
         text-align: center;
       }
     }
-  }
+  } 
 
   .social-links {
     max-width: auto;
   }
 }
 
+@media only screen and (min-width: 500px) { /* Tablets, smaller laptops */
+
+.footer-block {
+  width: 50%;
+  float: left;
+  height: 195px;
+  border-left: solid 1px $blue;
+  padding-top: 2em;
+
+}
+
+}
+
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
 
 }
 
+
 @media only screen and (min-width: 1030px) { /* Desktop */
   .footer, #footer {
-    margin-top: 6em;
+    margin-top: 5em;
     .footer-blocks{
-      margin-bottom: 4em;
       .footer-block {
         width: 25%;
-        float: left;
-        height: 195px;
       }
       #social-links {
         border-left: solid 1px $blue;
-        padding: 2em 2em 0;
+        padding: 2em 1.5em 0 1.5em ;
       }
       #site-contents{
-        padding: 2em 2em 0;
+        padding: 2em 1.5em 0 1.5em ;
+      }
+      #contact-info, #news-signup {
+        padding-top: 2em;
       }
 
     }
   }
 }
 
+@media only screen and (min-width: 1160px) {
+  #contact-info {padding-left:0;}
+}
+
 @media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
   .footer, #footer {
-    margin-top: 6em;
-
     .footer-blocks{
-      margin-bottom: 4em;
-      .footer-block {
-        width: 25%;
-        float: left;
-        height: 195px;
-      }
-
       #social-links,  #site-contents {
         padding-left: 3em;
         padding-right: 3em;

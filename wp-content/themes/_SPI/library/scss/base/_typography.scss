@@ -39,6 +39,7 @@ p {
   margin:            0 0 1em 0;
 }
 
+%article-text,
 .article-content p,
 .entry-content p {
   text-indent:       2em;
@@ -50,6 +51,22 @@ p {
 .projects-overview p {
   max-width:         830px;
   margin:            0 auto 1em;
+}
+
+%tag {
+  display: inline-block;
+  border: 1px solid $blue;
+  padding: 4px 16px 1px;
+  background-color: $page;
+  font-family: $links;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 h1, .h1 {
@@ -178,7 +195,7 @@ h6, .h6 {
     margin:            0 0 1em 0;
   }
 
-  .article-content p, .entry-content p { text-indent: 3em; }
+  %article-text, .article-content p, .entry-content p { text-indent: 3em; }
   .article-content .wp-caption-text, .entry-content .wp-caption-text { text-indent: 0; }
 
   h1, .h1 {
