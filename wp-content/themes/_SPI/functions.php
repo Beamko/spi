@@ -199,6 +199,32 @@ function bones_comments( $comment, $args, $depth ) {
 } // don't remove this bracket!
 
 
+
+/*
+ SPI Comments
+*/
+
+add_filter('comment_form_defaults', 'spi_comments');
+
+function spi_comments($defaults) {
+  $defaults['comment_notes_after'] = '';
+  $defaults['comment_notes_before'] = '';
+  $defaults['title_reply'] = '';
+  $defaults['comment_field'] = '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Your comment"></textarea></p>';
+  return $defaults;
+}
+
+add_filter('comment_form_default_fields', 'spi_comments_fields');
+
+
+function spi_comments_fields($fields) {
+  $fields['author'] = '<p class="comment-form-item comment-form-author"><input id="author" name="author" type="text" size="30" placeholder="Full Name*"/></p>';
+  $fields['email'] = '<p class="comment-form-item comment-form-email"><input id="email" name="email" type="email" size="30" placeholder="Email*"/></p>';
+  $fields['url'] = '<p class="comment-form-item comment-form-url"><input id="url" name="url" type="url" size="30" placeholder="Website"/></p>';
+  return $fields;
+}
+
+
 /*
 This is a modification of a function found in the
 twentythirteen theme where we can declare some

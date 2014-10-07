@@ -26,7 +26,7 @@
 
 /* Search Items */
 .search-item {
-	max-width: 830px;
+	@extend %max-width-section;
 	margin: 0 auto 2em;
 	p {
 		@extend %article-text;

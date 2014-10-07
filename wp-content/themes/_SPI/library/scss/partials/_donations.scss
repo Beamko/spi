@@ -2,11 +2,15 @@
 ---------------------------------
   D O N A T I O N S   P A G E
 --------------------------------- */
+.dontations-header {
+	padding-bottom:  .75em;
+	border-bottom: solid 1px $blue;
+	margin-bottom:  .75em;
+}
+
 .donation-form-section {
-	margin-bottom: 40px;
-	padding: 45px 0;
-	border-bottom: 1px solid $blue;
-	border-top: 1px solid $blue;
+	padding: 10px 0;
+	margin-bottom: 25px;
 	input[type="text"] {
 		@extend %large-input;
 	}
@@ -20,8 +24,8 @@
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
 
 	.donation-form-section {
-		margin-bottom: 65px;
-		padding: 65px 0;
+		margin-bottom: 50px;
+		padding: 20px 0;
 	}
 
 }

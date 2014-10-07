@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+    {% include "blog-header.twig" %}
+
+    <div class="row js-isotope">
+        {% for post in posts %}
+            {% include "blog-listing-item.twig" %}
+        {% endfor %}
+    </div>
+
+</article>
+
+{% endblock %}
