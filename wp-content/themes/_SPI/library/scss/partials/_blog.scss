@@ -66,6 +66,7 @@
 	}
 	li {
 		@extend .note-text;
+		margin-bottom: 1em;
 		list-style-type: none;
 	}
 }
@@ -103,7 +104,7 @@
 
 	.blog-list-item {
 		.h5 {
-			max-width: 80%;
+			max-width: 82%;
 			margin: 0 auto .07em;
 		}
 		img {
