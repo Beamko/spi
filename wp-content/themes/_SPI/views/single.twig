@@ -19,10 +19,11 @@
 
             {% if post.get_field('footnotes') %}
                 <section class="post-section footnotes-section">
-                    {% for footnote in post.get_field('footnotes') %}
-                        <li><span><strong>{{ footnote.number }}.</strong></span> {{ footnote.footnote_text }}</li>
-                        
-                    {% endfor %}
+                    <ul>
+                        {% for footnote in post.get_field('footnotes') %}
+                            <li><span><strong>{{ footnote.number }}.</strong></span> {{ footnote.footnote_text }}</li>
+                        {% endfor %}      
+                    </ul>
                 </section>
             {% endif %}
 
