@@ -13,7 +13,7 @@
 
 
         <section class="cf post-summary">
-            {{post.get_field('blog_content')}}
+            <p>{{post.get_field('blog_content')|length > 350 ? post.get_field('blog_content')|striptags|slice(0, 350) ~ '...' : post.get_field('blog_content')}}</p>
         </section>
 
         {% for category in post.terms('category') %}
