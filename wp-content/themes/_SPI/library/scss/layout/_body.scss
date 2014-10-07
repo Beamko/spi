@@ -8,6 +8,16 @@ body {
     text-align: center;
 }
 
+::-moz-selection {
+    //color: $black;
+    background: $yellow;
+}
+
+::selection {
+    //color: $black;
+    background: $yellow;
+}
+
 /*
 -------------------------------------------------------------
   L A Y O U T
@@ -33,6 +43,10 @@ body {
   }
 }
 
+.library-header {
+  border-bottom: solid 1px $blue;
+  margin-bottom: 4em;
+}
 .feature-block {
   margin-bottom: 3em;
 }
@@ -40,6 +54,12 @@ body {
 .feature-info {
   margin-top: 5em;
   margin-bottom: 1em;
+}
+
+
+%max-width-section {
+  max-width: 830px;
+  margin: 0 auto;
 }
 
 

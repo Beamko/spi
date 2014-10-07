@@ -1,0 +1,122 @@
+/*
+-------------------------------------------------------------
+	B L O G   L I S T I N G   P A G E
+------------------------------------------------------------- */
+.blog-list-item {
+	.h5 {
+		margin: 0 0 .07em;
+	}
+	.display-date,
+	.author {
+		@extend .info-text;
+	}
+	.display-date {
+		margin-bottom: 0.4em;
+	}
+	.author {
+		font-family: $headline;
+	  font-weight:       700;
+	  text-transform:    none;
+	  letter-spacing:    0.05em;
+	}
+}
+
+.post-summary p {
+	@include hyphenate;
+}
+
+/* Hide footnotes from archive page */
+.blog-list-item {
+	.footnote_container_prepare,
+	.footnote_plugin_tooltip_text,
+	#footnote_references_container {
+		display: none !important;
+	}
+}
+
+
+/*
+-------------------------------------------------------------
+	S I N G L E   B L O G   P O S T   P A G E
+------------------------------------------------------------- */
+.blog-header {
+	margin-bottom: 2.8em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid $blue;
+	.page-title {
+		margin-bottom: 0.3em;
+	}
+	h4 {
+		margin: 0 0 .16em 0;
+	}
+}
+
+.post-section {
+	padding: 4em 0; 
+	border-top: 1px solid $blue;
+}
+
+.category-tag {
+	@extend %tag;
+}
+
+/* Footnotes */
+.footnotes-section {
+	p {
+		@extend .info-text;
+		display: inline;
+	}
+}
+
+
+
+
+
+
+/*
+-------------------------------------------------------------
+	M O B I L E   S T Y L E S
+------------------------------------------------------------- */
+@media only screen and (min-width: 481px) {
+  .post-summary p {
+    font-size: 22px;
+    line-height: 27px;
+    margin: 0 0 1em 0;
+    text-align: left;
+    text-indent: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+.blog-header {
+	margin-bottom: 3.8em;
+	padding-bottom: 3em;
+}
+
+.blog-list-item {
+	.h5 {
+		max-width: 80%;
+		margin: 0 auto .07em;
+	}
+	img {
+		margin-bottom: 25px;
+	}
+}
+
+.footnotes-section {
+	div {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+	}
+}
+
+}
+
+@media only screen and (min-width: 1030px) { /* Desktop */
+
+}
+
+@media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
+
+}

@@ -146,6 +146,22 @@ POSTS & CONTENT STYLES
   margin: 0;
 }
 
+.credits-title{
+  padding-bottom:  .75em;
+  border-bottom: solid 1px $blue;
+  margin-bottom:  .75em;
+}
+.credits-section p {
+  text-indent: 0;
+  text-align: center;
+
+}
+
+.project-sections {
+  padding-bottom: 1em;
+  h2.article-h1 { margin-top:1.2em;}
+}
+
 
 
 @media only screen and (min-width: 481px) { /* Larger Mobile Devices */

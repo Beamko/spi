@@ -17,6 +17,11 @@
 	.email	{
 		text-transform: uppercase;
 		word-wrap: break-word;
+		font-family: $links;
+		font-weight: 400;
+		letter-spacing: .075em;
+		a:hover, a:focus {text-decoration: underline;}
+
 	}
 	i {
 		margin-right: 3px;

@@ -53,6 +53,22 @@ p {
   margin:            0 auto 1em;
 }
 
+%tag {
+  display: inline-block;
+  border: 1px solid $blue;
+  padding: 4px 16px 1px;
+  background-color: $page;
+  font-family: $links;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 h1, .h1 {
   font-family:       $display;
   font-weight:       700;
