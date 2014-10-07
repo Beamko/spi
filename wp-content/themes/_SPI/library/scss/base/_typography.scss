@@ -30,7 +30,6 @@ body {
 // smallscreen styles first
 
 
-
 p {
   font-family:       $copy;
   font-weight:       400;
@@ -81,6 +80,7 @@ h1, .h1 {
 h2, .h2 {
   font-family:       $headline;
   font-weight:       700;
+  text-transform:    none;
   letter-spacing:    1px;
   font-size:         26px;
   line-height:       26px;
@@ -131,9 +131,15 @@ h6, .h6 {
   line-height:       20px;
 }
 
+.note-text {
+  font-family:       $info;
+  font-weight:       400;
+  font-size:         12px;
+  line-height:       16px;
+}
 
-
-.copyright, #contact-info p {
+.copyright,
+#contact-info p {
   font-family:       $info;
   font-weight:       400;
   font-size:         10px;
@@ -171,6 +177,7 @@ h6, .h6 {
 .link, .menu-item {
   font-family:       $links;
   text-transform:    uppercase;
+  text-decoration: none;
   font-weight:       400;
   letter-spacing:    2px;
   color:             $blue;
@@ -240,7 +247,13 @@ h6, .h6 {
     line-height:       20px;
   }
 
-  .copyright, #contact-info p {
+  .note-text {
+    font-size:         14px;
+    line-height:       17px;
+  }
+
+  .copyright,
+  #contact-info p {
     font-size:         16px;
     line-height:       20px;
     text-indent:       0;
@@ -315,7 +328,13 @@ h6, .h6 {
     line-height:       24px;
   }
 
-  .copyright, #contact-info p {
+  .note-text {
+    font-size:         15px;
+    line-height:       19px;
+  }
+
+  .copyright,
+  #contact-info p {
     font-size:         15px;
     line-height:       19px;
     text-indent:       0;
@@ -334,6 +353,12 @@ h6, .h6 {
   .link, .menu-item {
     font-size:         20px;
     line-height:       38px;
+  }
+
+  .small-text {
+    font-size:         22px;
+    line-height:       27px;
+    margin:            0 0 1em 0;
   }
 
 }

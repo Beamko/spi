@@ -1,22 +1,22 @@
 <div id="{{post.title}}" class="resource-section">
     <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
         <h2>{{post.title}}</h2>
-        <div data-masonry-options='{ "itemSelector": ".item" }' class="js-masonry m-all t-2of3 d-5of7 cf row" role="main">
+        <div class="js-isotope" role="main">
         {% for item in post.get_field('library_sub_section') %}
         
-            <div class="large-4 column item" style="width: 33%;">
+            <div class="large-4 medium-6 column item">
                 <h3>{{item.sub_section_title}}</h3>
                 <ul>
                 {% for resource in item.resources %}
                     <li>
                         <span class="resource">
                             {% if resource.resource_type == "document" %}
-                                <i class="icon-doc"></i>
-                                <a href="{{resource.document}}" target="_blank">{{resource.document_title}}</a>
+                                
+                                <a href="{{resource.document}}" target="_blank"><i class="icon-doc"></i>{{resource.document_title}}</a>
                             {% endif %}
                             {% if resource.resource_type == "link" %}
-                                <i class="icon-link"></i>
-                                <a href="{{resource.link_url}}" target="_blank">{{resource.link_title}}</a>
+                                
+                                <a href="{{resource.link_url}}" target="_blank"><i class="icon-link"></i>{{resource.link_title}}</a>
                             {% endif %} 
                         </span>
                     </li>

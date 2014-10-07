@@ -11,7 +11,7 @@
 		text-align: center;
 	}
 	li {
-		height: 30px;
+		margin-top: -6px;
 	}
 }
 
@@ -20,13 +20,13 @@
 .resource {
 	@extend .link;
 	display: inline-block;
-	i,
 	a {
+		clear: both;
 		display: block;
 		float: left;
+		line-height: 25px;
 	}
 	i {
-		clear: both;
 		margin: 9px 4px 0 0;
 	}
 	a {

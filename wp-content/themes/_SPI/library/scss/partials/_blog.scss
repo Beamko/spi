@@ -56,20 +56,30 @@
 	border-top: 1px solid $blue;
 }
 
-.category-tag {
-	@extend %tag;
-}
-
 /* Footnotes */
-.footnotes-section {
-	p {
-		@extend .info-text;
+.footnotes-section ul {
+	margin: 0;
+	text-align: left;
+	p,
+	span {
+		@extend .note-text;
 		display: inline;
+	}
+	li {
+		@extend .note-text;
+		margin-bottom: 1em;
+		list-style-type: none;
 	}
 }
 
+/* Categories */
+.category-tags {
+	margin-bottom: 3em;
+}
 
-
+.category-tag {
+	@extend %tag;
+}
 
 
 
@@ -88,33 +98,46 @@
 }
 
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
-.blog-header {
-	margin-bottom: 3.8em;
-	padding-bottom: 3em;
-}
+	.blog-header {
+		margin-bottom: 3.8em;
+		padding-bottom: 3em;
+	}
 
-.blog-list-item {
-	.h5 {
-		max-width: 80%;
-		margin: 0 auto .07em;
+	.blog-list-item {
+		.h5 {
+			max-width: 82%;
+			margin: 0 auto .07em;
+		}
+		img {
+			margin-bottom: 25px;
+		}
 	}
-	img {
-		margin-bottom: 25px;
-	}
-}
 
-.footnotes-section {
-	div {
-    -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
+	.footnotes-section ul {
+	  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+	  -moz-column-count: 2; /* Firefox */
+	  column-count: 2;
+		li { /* Fix for single list items being split into multiple columns */
+			overflow: hidden; /* fix for Firefox */
+			break-inside: avoid-column;
+			-webkit-column-break-inside: avoid;
+		}
 	}
-}
+	.category-tags {
+		margin-bottom: 4em;
+	}
 
 }
 
 @media only screen and (min-width: 1030px) { /* Desktop */
-
+	.footnotes-section ul {
+	  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+	  -moz-column-count: 3; /* Firefox */
+	  column-count: 3;
+	}
+	.category-tags {
+		margin-bottom: 5em;
+	}
 }
 
 @media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */

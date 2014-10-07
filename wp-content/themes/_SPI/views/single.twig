@@ -19,17 +19,24 @@
 
             {% if post.get_field('footnotes') %}
                 <section class="post-section footnotes-section">
-                    {% for footnote in post.get_field('footnotes') %}
-                        <strong>{{ footnote.number }}</strong>. {{ footnote.footnote_text }}
+                    <ul>
+                        {% for footnote in post.get_field('footnotes') %}
+                            <li><span><strong>{{ footnote.number }}.</strong></span> {{ footnote.footnote_text }}</li>
+                        {% endfor %}      
+                    </ul>
+                </section>
+            {% endif %}
+
+            {% if categories %}
+                <section class="category-tags">
+                    {% for category in categories %}
+                        {% if category.name != 'Uncategorized' %}
+                            <a href="{{site.url}}/category/{{category.slug}}" class="category-tag">{{ category.name }}</a>
+                        {% endif %}
                     {% endfor %}
                 </section>
             {% endif %}
 
-            {% for category in categories %}
-                {% if category.name != 'Uncategorized' %}
-                    <a href="{{site.url}}/category/{{category.slug}}" class="category-tag">{{ category.name }}</a>
-                {% endif %}
-            {% endfor %}
 
             <section class="comments">
                 {% if post.get_comments() %}

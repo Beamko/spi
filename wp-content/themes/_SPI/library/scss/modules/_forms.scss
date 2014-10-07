@@ -39,7 +39,7 @@ textarea,
   box-shadow: none;
   color: $blue;
   font-family: $info;
-  font-size: 1em;
+  font-size: 15px;
   line-height: 40px;
   text-align: center;
   &:focus,
@@ -95,14 +95,87 @@ textarea {
   line-height: 1.5em;
 }
 
+.comment-form-comment textarea {
+  padding: 20px;
+  min-height: 236px;
+  border: 1px solid $blue;
+}
 
 /*
 -----------------------------
   S E L E C T
 ----------------------------- */
 select {
-
   -webkit-appearance: none;
+}
+
+/*
+-----------------------------
+  C O M M E N T   F O R M
+----------------------------- */
+.respond {
+  .h2 {
+    margin-bottom: 0.1em;
+  }
+  .link {
+    display: block;
+    margin-bottom: 2.2em;
+  }
+  .logged-in-as {
+    @extend .info-text;
+  }
+}
+
+.responses {
+  .h2 {
+    margin: 0 0 1.1em 0;
+  }
+  .comment-author {
+    margin-bottom: 0;
+    font-style: normal;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .blog-comment {
+    @extend %max-width-section;
+  }
+  .comment-content {
+    margin-top: -8px;
+    p {
+      @extend .small-text;
+      text-indent: 1em;
+      text-align: left;
+    }
+
+  }
+  .icon-asterisk {
+    text-align: center;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .comment-date {
+    margin: 0 0 .5em 0;
+  }
+}
+
+
+.comment-form {
+  max-width: 860px;
+  margin: 0 auto;
+
+  textarea::-webkit-input-placeholder { /* WebKit browsers */
+    padding-top: 110px;
+  }
+  textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    padding-top: 110px;
+  }
+  textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+    padding-top: 110px;
+  }
+  textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+    padding-top: 110px;
+  }
 }
 
 
@@ -136,5 +209,22 @@ select {
     margin: 0 auto 17px;
     font-size: 30px;
     line-height: 38px;
+  }
+  .comment-form-item {
+    display: block;
+    float: left;
+    width: 33.33333%;
+    padding-right: 33px;
+  }
+  .comment-form {
+    p:nth-child(3) {
+      padding-right: 0;
+    }
+  }
+
+  .responses {
+    .comment-content p {
+      text-indent: 2em;
+    }
   }
 }

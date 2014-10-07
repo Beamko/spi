@@ -137,7 +137,7 @@ jQuery(document).ready(function($) {
     $container.imagesLoaded( function() {
       $container.isotope('layout');
     });
-}
+  }
 
   spi.stickyNav = function () {
 
