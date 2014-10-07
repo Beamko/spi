@@ -164,6 +164,7 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'foundation-equalizer', get_stylesheet_directory_uri() . '/library/js/libs/foundation.equalizer.js', array( 'jquery' ) );
 		wp_enqueue_script( 'sticky-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.sticky.js', array( 'jquery' ) );
 		wp_enqueue_script( 'isotope', get_stylesheet_directory_uri() . '/library/js/libs/isotope.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'images-loaded', get_stylesheet_directory_uri() . '/library/js/libs/imagesloaded.js', array( 'jquery' ) );
 
 	}
 }

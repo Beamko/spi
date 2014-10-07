@@ -2,7 +2,6 @@
 -------------------------------------------------------------
   M O D A L S
 ------------------------------------------------------------- */
-
 %modal {
   position: fixed;
   z-index: 1000;
@@ -52,13 +51,19 @@
 
 /* Form elements */
 %modal {
-  input[type="text"] {
+  input[type="text"],
+  input[type="email"] {
     @extend .blue-input;
     @extend %large-input;
     margin-bottom: 25px;
     &:last-of-type {
       margin-bottom: 45px;
     }
+  }
+  .error-message {
+    @extend .info-text;
+    margin: -35px 0 30px;
+    color: #fff;
   }
   button,
   input[type="submit"] {

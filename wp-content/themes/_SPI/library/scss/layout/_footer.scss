@@ -85,7 +85,7 @@
     border-top: none;
 
 
-    .footer-blocks{
+    .footer-blocks {
       margin-bottom: 4em;
       .footer-block {
         width: 48%;
@@ -129,8 +129,8 @@
 
 @media only screen and (min-width: 1030px) { /* Desktop */
   .footer, #footer {
-    margin-top: 5em;
-    .footer-blocks{
+    margin-top: 4em;
+    .footer-blocks {
       .footer-block {
         width: 25%;
       }
@@ -144,7 +144,9 @@
       #contact-info, #news-signup {
         padding-top: 2em;
       }
-
+    }
+    .open-newsletter-modal {
+      margin-top: 5px;
     }
   }
 }
@@ -155,7 +157,7 @@
 
 @media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
   .footer, #footer {
-    .footer-blocks{
+    .footer-blocks {
       #social-links,  #site-contents {
         padding-left: 3em;
         padding-right: 3em;
