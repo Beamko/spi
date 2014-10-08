@@ -49,6 +49,9 @@ body {
 }
 .feature-block {
   margin-bottom: 3em;
+  h6 {
+    margin: 0.5em 0 2em 0;
+  }
 }
 
 .feature-info {
@@ -71,7 +74,6 @@ body {
   }
   .feature-block {
     h6 {
-      margin: 0.5em 0 2em 0;
       font-size: 19px;
       line-height: 21px;
     }
