@@ -168,7 +168,7 @@ jQuery(document).ready(function($) {
 
   spi.scrollToSection = function () {
     $('.js-subnav-link').on('click', function (e) {
-      e.preventDefault();
+
       var section = $(e.target).attr('href')
       var offset = 143; //Offset of 20px
 
