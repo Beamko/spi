@@ -41,13 +41,20 @@ p {
 %article-text,
 .article-content p,
 .entry-content p {
-  text-indent:       2em;
   text-align:        left;
+}
+
+%article-text:first-child,
+.article-content p:first-child,
+.entry-content p:first-child {
+  text-indent:       2em;
 }
 
 .article-content p,
 .entry-content p,
-.projects-overview p {
+.projects-overview p,
+.article-content ol,
+.article-content ul {
   max-width:         830px;
   margin:            0 auto 1em;
 }
@@ -124,7 +131,45 @@ h6, .h6 {
   margin:            0 0 .7em 0;
 }
 
-.info-text {
+blockquote {
+  padding: 0;
+  margin:            0 1em;
+  padding-bottom:     .5em;
+  p{
+    font-family:     $info;
+    text-indent:     0 !important;
+    font-size:       15px;
+
+  }
+}
+
+.article-body ol,.article-body ul {
+  line-height:       18px;
+  text-align: left;
+  list-style-position: outside;
+  margin:            0 1.5em 0 2.25em ;
+  padding-bottom:     .5em;
+  li {margin-bottom: .5em;}
+}
+
+.article-body ol {list-style-type: decimal;}
+.article-body ul {list-style-type: circle;}
+
+hr {
+  border: 0;
+  height: 0;
+  border: none;
+  border-top: 1px solid $blue;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 1.3em;
+  padding-bottom: 1.45em;
+  text-align: center;
+
+  }
+
+
+.info-text, .wp-caption-text {
   font-family:       $info;
   font-weight:       400;
   font-size:         16px;
@@ -156,7 +201,7 @@ h6, .h6 {
 }
 
 .image-caption {
-  font-family:       $copy;
+  font-family:       $info;
   font-weight:       400;
   font-size:         10px;
   line-height:       13px;
@@ -202,7 +247,7 @@ h6, .h6 {
     margin:            0 0 1em 0;
   }
 
-  %article-text, .article-content p, .entry-content p { text-indent: 3em; }
+//  %article-text, .article-content p, .entry-content p { text-indent: 3em; }
   .article-content .wp-caption-text, .entry-content .wp-caption-text { text-indent: 0; }
 
   h1, .h1 {
@@ -242,7 +287,33 @@ h6, .h6 {
     margin:            0 0 .7em 0;
   }
 
-  .info-text {
+  blockquote {
+    padding: 0;
+    margin:            0 1em;
+    padding-bottom:     .5em;
+    p{
+      font-size:         20px;
+      line-height:       27px;
+    }
+  }
+
+  .article-body ol,.article-body ul {
+    font-size:         22px;
+    line-height:       27px;
+    text-align: left;
+    list-style-position: outside;
+    margin:            0 1.5em 0 2.25em ;
+    padding-bottom:     .5em;
+    li {margin-bottom: .5em;}
+  }
+
+  hr {
+    width: 30%;
+    margin-top: 1.5em;
+    padding-bottom: 1.8em;
+  }
+
+  .info-text, .wp-caption-text {
     font-size:         16px;
     line-height:       20px;
   }
@@ -323,6 +394,33 @@ h6, .h6 {
     margin:            0 0 .7em 0;
   }
 
+  blockquote {
+    padding:           0;
+    margin:            0 1em;
+    padding-bottom:     .5em;
+    p{
+      padding:         0 1.5em;
+      font-size:         28px;
+      line-height:       38px;
+    }
+  }
+
+  .article-body ol,.article-body ul {
+    font-size:         30px;
+    line-height:       38px;
+    text-align: left;
+    list-style-position: outside;
+    margin:            0 1.5em 0 2em ;
+    padding-bottom:     .5em;
+    li {margin-bottom: .5em;}
+  }
+
+  hr {
+    width: 22.5%;
+    margin-top: 3em;
+    padding-bottom: 3.6em;
+  }
+
   .info-text {
     font-size:         18px;
     line-height:       24px;
@@ -343,11 +441,17 @@ h6, .h6 {
   .caption {
     font-size:         15px;
     line-height:       19px;
+    margin: 0 auto;
   }
 
   .image-caption {
     font-size:         15px;
     line-height:       19px;
+    margin: 0 auto;
+  }
+
+  .wp-caption p.wp-caption-text {
+    margin: 0 auto;
   }
 
   .link, .menu-item {
@@ -361,6 +465,14 @@ h6, .h6 {
     margin:            0 0 1em 0;
   }
 
+}
+
+@media only screen and (min-width: 940px) {
+  .article-content ol,
+  .article-content ul {
+    margin:            0 auto;
+    padding:           0 2.5em .8em 2.5em;
+  }
 }
 
 

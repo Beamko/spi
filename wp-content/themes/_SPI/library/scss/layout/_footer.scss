@@ -88,7 +88,7 @@
     .footer-blocks {
       margin-bottom: 4em;
       .footer-block {
-        width: 48%;
+        width: 49%;
         float: left;
         border-left: solid 1px $blue;
         padding-top: 2em;
@@ -102,7 +102,7 @@
         text-align: center;
       }
     }
-  } 
+  }
 
   .social-links {
     max-width: auto;
@@ -110,16 +110,18 @@
 }
 
 @media only screen and (min-width: 500px) { /* Tablets, smaller laptops */
+.footer, #footer {
+  .footer-blocks {
+    .footer-block {
+      width: 50%;
+      float: left;
+      height: 195px;
+      border-left: solid 1px $blue;
+      padding-top: 2em;
 
-.footer-block {
-  width: 50%;
-  float: left;
-  height: 195px;
-  border-left: solid 1px $blue;
-  padding-top: 2em;
-
+    }
+  }
 }
-
 }
 
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
