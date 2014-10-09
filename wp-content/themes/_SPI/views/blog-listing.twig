@@ -6,12 +6,19 @@
 
     {% include "blog-header.twig" %}
 
-    <div class="row js-isotope">
+    {% include "blog-info.twig" %}
+
+    <div id="blog-list" class="row js-isotope">
         {% for post in posts %}
             {% include "blog-listing-item.twig" %}
         {% endfor %}
     </div>
 
 </article>
+
+{#
+{% include 'modal-blog-categories.twig' %}
+{% include 'modal-blog-archives.twig' %}
+#}
 
 {% endblock %}
