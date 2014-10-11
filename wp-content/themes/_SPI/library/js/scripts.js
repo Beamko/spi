@@ -261,14 +261,14 @@ jQuery(document).ready(function($) {
   }
 
 
-	//var $modalContents = "Hello";
+	//var $modalContents = "Hello.";
 
 	spi.blogCategories = function () {
 		$('.js-open-cats').click(function (e) {
 			e.preventDefault();
 
-			//$modalContents = $('.js-archive-modal-contents');
-			//$('.js-modal-div').html($modalContents);
+			var $modalContents = $('.blog-cats-modal');
+			$('#js-blog-modals').html($modalContents);
 
 			$('.js-blog-cats-modal').slideToggle('fast');
 		});
@@ -282,6 +282,9 @@ jQuery(document).ready(function($) {
 		$('.js-open-arch').click(function (e) {
 			e.preventDefault();
 
+			var $modalContents = $('.blog-arch-modal');
+			$('#js-blog-modals').html($modalContents);
+
 			$('.js-blog-arch-modal').slideToggle('fast');
 		});
 
@@ -294,7 +297,10 @@ jQuery(document).ready(function($) {
 		$('.js-toggle-blog-info').click(function (e) {
 			e.preventDefault();
 			$('#blog-list').fadeOut('fast');
+			//$('js-toggle-blog-list').removeClass('js-active-link');
+
 			$('#blog-info').fadeIn('fast');
+			//$('js-toggle-blog-info').addClass('js-active-link');
 		});
 
 		$('.js-toggle-blog-list').click(function (e) {

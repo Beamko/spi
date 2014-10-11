@@ -9,6 +9,7 @@ $posts = Timber::get_posts();
 $posts['author'] = get_the_author();
 
 $context['posts'] = $posts;
+$context['categories'] = Timber::get_terms('category');
 
 Timber::render('blog-listing.twig', $context);
 
