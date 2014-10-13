@@ -167,16 +167,16 @@ select {
   margin: 0 auto;
 
   textarea::-webkit-input-placeholder { /* WebKit browsers */
-    padding-top: 110px;
+    padding-top: 90px;
   }
   textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    padding-top: 110px;
+    padding-top: 90px;
   }
   textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-    padding-top: 110px;
+    padding-top: 90px;
   }
   textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
-    padding-top: 110px;
+    padding-top: 90px;
   }
 }
 

@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<article id="post-{{post.ID}}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+    {% include "blog-header.twig" %}
+
+	{{get_the_category}}
+
+	{% if function('is_category') %}
+	<h2>Category: {{function('single_cat_title')}}</h2>
+	{% endif %}
+
+    <div class="row js-isotope">
+        {% for post in posts %}
+            {% include "blog-listing-item.twig" %}
+        {% endfor %}
+    </div>
+
+</article>
+
+{% endblock %}

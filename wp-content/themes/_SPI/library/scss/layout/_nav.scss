@@ -163,14 +163,28 @@
     }
 
   }
+  .about-nav .menu-item {
+    margin: 0;
+    width: 19%;
+  }
+  .projects-nav .menu-item {
+    margin: 0;
+    width: 24%;
+  }
 }
 
 @media only screen and (min-width: 900px) { /* Desktop */
 
   .subnav {
-    ul.nav li {
+    li {
       margin: 0 2em;
     }
+  }
+
+
+  .projects-nav .menu-item {
+    margin: 0;
+    width: 24%;
   }
 
 }
@@ -178,29 +192,33 @@
 @media only screen and (min-width: 1050px) { /* Desktop */
 
   .subnav {
-    ul.nav li {
+    li {
       margin: 0 2.5em;
     }
   }
+
+
 
 }
 
 @media only screen and (min-width: 1120px) { /* Larger monitors, full screen viewers */
 
   .subnav {
-    ul.nav li {
+    li {
       margin: 0 3em;
     }
   }
+
 
 }
 
 @media only screen and (min-width: 1240px) { /* Larger monitors, full screen viewers */
 
   .subnav {
-    ul.nav li {
+    li {
       margin: 0 3.5em;
     }
   }
+
 
 }

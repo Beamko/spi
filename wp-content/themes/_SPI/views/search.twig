@@ -24,12 +24,12 @@
                         {% else %}
                             <span>{{post.post_type}}</span>
                         {% endif %}
-                        <h4 class="search-title"><a href="{{post.permalink}}" rel="bookmark" title="{{post.post_title}}">{{post.post_title}}</a></h4>
+                        <h4 class="search-title"><a href="{% if post.post_parent != 0 %}{{site.url}}/{{post.parent.slug}}{% else %}{{post.permalink}}{% endif %}" rel="bookmark" title="{{post.post_title}}">{{post.post_title}}</a></h4>
 
                     </header>
 
                     <section class="article-content">
-                        {{post.post_excerpt}}
+                        <p>{{post.post_excerpt}}</p>
                     </section>
 
                 </article>
