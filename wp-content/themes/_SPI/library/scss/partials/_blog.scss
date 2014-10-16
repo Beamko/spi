@@ -21,6 +21,18 @@
 	}
 }
 
+.blog-cats-modal, .blog-arch-modal {
+	@extend %modal;
+}
+
+.js-active-link {
+	//text-decoration: underline !important;
+}
+
+#blog-info {
+	display:none;
+}
+
 .post-summary p {
 	@include hyphenate;
 }
@@ -33,6 +45,7 @@
 		display: none !important;
 	}
 }
+
 
 
 /*
@@ -52,7 +65,7 @@
 }
 
 .post-section {
-	padding: 4em 0; 
+	padding: 2.5em 0 1.5em 0;
 	border-top: 1px solid $blue;
 }
 

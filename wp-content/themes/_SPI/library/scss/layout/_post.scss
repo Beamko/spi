@@ -38,7 +38,7 @@ POSTS & CONTENT STYLES
     border: 1px solid $blue;
     margin-bottom: 1.5em;
     caption {
-      margin: 0 0 7px;
+      margin: 0 auto;
       font-size: 0.75em;
       color: $blue;
       text-transform: uppercase;
@@ -133,7 +133,9 @@ POSTS & CONTENT STYLES
 
   p.wp-caption-text {
     @extend .image-caption;
-    margin: 10px 0 14px;
+    margin: 0 auto;
+    margin-top: 10px ;
+    margin-bottom: 14px;;
     text-align: center;
     text-indent: 0;
   }

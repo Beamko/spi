@@ -99,6 +99,8 @@ textarea {
   padding: 20px;
   min-height: 236px;
   border: 1px solid $blue;
+  text-align: left;
+  margin-bottom: 1.5em;
 }
 
 /*
@@ -195,7 +197,7 @@ select {
   color: $lightBlue;
 }
 
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
   color: $lightBlue;
 }
 

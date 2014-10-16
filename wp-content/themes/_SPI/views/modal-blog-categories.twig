@@ -1,0 +1,14 @@
+<section class="js-blog-cats-modal blog-cats-modal" style="display:none;">
+  <a href="javascript:void(0);" class="js-hide-blog-cats-modal link icon-close-white"></a>
+  <div class="row menu-link-container">
+    <div class="js-clickable-area large-8 large-centered column">
+
+      <ul class="modal-cat-tags clearfix">
+      {% for cat in categories %}
+        <li><a class="modal-category-tag" href="{{cat.link}}">{{cat.name}}</a></li>
+      {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</section>

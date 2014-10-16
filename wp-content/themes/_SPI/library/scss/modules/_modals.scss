@@ -49,6 +49,25 @@
   }
 }
 
+.modal-cat-tags {
+  margin: 0 auto;
+  text-align: center;
+  li {
+    display: inline-block;
+    text-align: center;
+    margin: 1em .5em;
+    a.modal-category-tag {
+      @extend %tag;
+      border: 1px solid $page;
+      padding: 15px 20px 12px;
+      font-size: 130%;
+      margin: 0;
+    }
+  }
+
+
+}
+
 /* Form elements */
 %modal {
   input[type="text"],
