@@ -121,7 +121,7 @@ jQuery(document).ready(function($) {
     spi.newsletterSignup();
     spi.searchSite();
 		spi.blogCategories();
-		spi.blogArchives();
+		// spi.blogArchives();
 		spi.bloggleToggle();
 
     $(window).on("resize", spi.stickyNav);
@@ -266,38 +266,38 @@ jQuery(document).ready(function($) {
     });
   }
 
-
-	//var $modalContents = "Hello.";
-
 	spi.blogCategories = function () {
-		$('.js-open-cats').click(function (e) {
-			e.preventDefault();
+    $('.js-open-cats').click(function (e) {
+      e.preventDefault();
+      //_gaq.push(['_trackEvent', 'mobile-nav', 'toggle']);
+      var $modalContents = $('.blog-cats-modal');
+      $('#js-blog-modals').html($modalContents);
 
-			var $modalContents = $('.blog-cats-modal');
-			$('#js-blog-modals').html($modalContents);
+      $('.blog-cats-modal').slideToggle('fast');
 
-			$('.js-blog-cats-modal').slideToggle('fast');
-		});
+      $('.blog-cats-modal').on('click.closeModal', function (e) {
+        if ($(e.target).closest('.blog-cats-modal a').length > 0 || $(e.target).closest('.js-clickable-area').length === 0) {
+          $('.blog-cats-modal').slideToggle('fast');
+        }
+      });
 
-		$('.js-blog-cats-modal a').click(function (e) {
-			$('.js-blog-cats-modal').slideToggle('fast');
-		});
+    });
 	}
 
-	spi.blogArchives = function () {
-		$('.js-open-arch').click(function (e) {
-			e.preventDefault();
+	// spi.blogArchives = function () {
+	// 	$('.js-open-arch').click(function (e) {
+	// 		e.preventDefault();
 
-			var $modalContents = $('.blog-arch-modal');
-			$('#js-blog-modals').html($modalContents);
+	// 		var $modalContents = $('.blog-arch-modal');
+	// 		$('#js-blog-modals').html($modalContents);
 
-			$('.js-blog-arch-modal').slideToggle('fast');
-		});
+	// 		$('.js-blog-arch-modal').slideToggle('fast');
+	// 	});
 
-		$('.js-blog-arch-modal a').click(function (e) {
-			$('.js-blog-arch-modal').slideToggle('fast');
-		});
-	}
+	// 	$('.js-blog-arch-modal a').click(function (e) {
+	// 		$('.js-blog-arch-modal').slideToggle('fast');
+	// 	});
+	// }
 
 	spi.bloggleToggle = function () {
 		$('.js-toggle-blog-info').click(function (e) {
