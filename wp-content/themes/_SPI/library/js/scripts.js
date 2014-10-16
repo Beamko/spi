@@ -311,8 +311,13 @@ jQuery(document).ready(function($) {
 
 		$('.js-toggle-blog-list').click(function (e) {
 			e.preventDefault();
-			$('#blog-list').fadeIn('fast');
-			$('#blog-info').fadeOut('fast');
+      if ($('#blog-list').length > 0) {
+        $('#blog-list').fadeIn('fast');
+        $('#blog-info').fadeOut('fast');
+      } else {
+        window.location.replace($(e.target).data('href'));
+      }
+
 		});
 	}
 

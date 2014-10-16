@@ -10,6 +10,8 @@ $posts['author'] = get_the_author();
 
 $context['posts'] = $posts;
 
+$context['categories'] = Timber::get_terms('category');
+
 Timber::render('archive.twig', $context);
 
 ?>

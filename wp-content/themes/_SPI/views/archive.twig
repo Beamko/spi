@@ -6,6 +6,8 @@
 
     {% include "blog-header.twig" %}
 
+    {% include "blog-info.twig" %}
+
 	{{get_the_category}}
 
 	{% if function('is_category') %}
@@ -19,5 +21,8 @@
     </div>
 
 </article>
+
+{% include 'modal-blog-categories.twig' %}
+{% include 'modal-blog-archives.twig' %}
 
 {% endblock %}
