@@ -2,15 +2,21 @@
     <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
         <section class="single-member">
             <div class="headshot-wrapper">
+                {% if post.get_field('headshot')%}
                 <img class="headshot" src="{{post.get_field('headshot')}}" alt="{{post.title}}">
+                {% endif %}
+                {% if post.content %}
                 <div class="bio">{{post.content}}</div>   
+                {% endif %}
             </div>
 
             <h4>{{post.title}}</h4>
 
             <h5>{{post.get_field('position')}}</h5>
 
+            {% if post.get_field('email') %}
             <h6 class="email"><i class="icon-mail"></i><a href="mailto:{{post.get_field('email')}}"> {{post.get_field('email')}}</a></h6>
+            {% endif %}
 
         </section>
 
