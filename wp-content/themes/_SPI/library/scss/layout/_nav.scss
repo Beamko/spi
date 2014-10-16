@@ -56,6 +56,10 @@
   }
 }
 
+.subnav-sticky .subnav {
+  padding: .55em 0;
+}
+
 .mobile-nav-wrapper {
   z-index: 999;
   .nav {
@@ -86,10 +90,14 @@
 
   .subnav {
     margin-top: 2.5em;
-    padding-top: 1em 0;
+    padding: 1em 0;
     li {
       margin: 0 1.75em;
     }
+  }
+
+  .subnav-sticky .subnav {
+    padding: 1em 0 .8em;
   }
 
 }
@@ -97,6 +105,15 @@
 @media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
   .top-nav-wrapper {
     z-index: 999;
+    &.subnav-sticky {
+      li a {
+        padding: .5em 2em;
+      }
+      #home-item a {
+        background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 5px;
+        background-size: 39px 39px;
+      }
+    }
     ul:first-of-type {
       margin: 0 auto;
       max-width: 1280px;
@@ -161,8 +178,12 @@
     li {
       margin: 0 1.3em;
     }
-
   }
+
+  .subnav-sticky .subnav {
+    padding-top: 1em;
+  }
+
   .about-nav .menu-item {
     margin: 0;
     width: 19%;
@@ -181,7 +202,6 @@
     }
   }
 
-
   .projects-nav .menu-item {
     margin: 0;
     width: 24%;
@@ -196,8 +216,6 @@
       margin: 0 2.5em;
     }
   }
-
-
 
 }
 

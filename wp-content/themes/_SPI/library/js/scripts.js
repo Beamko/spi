@@ -146,8 +146,11 @@ jQuery(document).ready(function($) {
 
     var useStickyNav = ($('html').hasClass('touch') && $(window).width >=768) || Modernizr.mq('only all and (max-width: 768px)') ? false : true;
 
+    $('#subnav').on('sticky-start', function() { $('.top-nav-wrapper').addClass('subnav-sticky') });
+    $('#subnav').on('sticky-end', function() { $('.top-nav-wrapper').removeClass('subnav-sticky') });
+
     if (useStickyNav && !stickyNavLoaded) {
-      $('#subnav').sticky({ topSpacing: 64, getWidthFrom: '.article-header', responsiveWidth: true, className: 'subnav-sticky' });
+      $('#subnav').sticky({ topSpacing: 54, getWidthFrom: '.article-header', responsiveWidth: true, className: 'subnav-sticky' });
       stickyNavLoaded = true;
     } else if (!useStickyNav && stickyNavLoaded) {
       $('#subnav').unstick();
