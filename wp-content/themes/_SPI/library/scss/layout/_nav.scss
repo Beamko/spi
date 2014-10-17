@@ -58,12 +58,13 @@
 
 .subnav-sticky .subnav {
   padding: .55em 0;
+  transition:  .2s;
 }
 
 .mobile-nav-wrapper {
   z-index: 999;
   .nav {
-    padding-top: 15px;
+    padding-top: 8px;
   }
   li {
     margin-bottom: 18px;
@@ -98,6 +99,7 @@
 
   .subnav-sticky .subnav {
     padding: 1em 0 .8em;
+    transition:  .2s;
   }
 
 }
@@ -108,10 +110,11 @@
     &.subnav-sticky {
       li a {
         padding: .5em 2em;
+        transition:  .2s;
       }
       #home-item a {
-        background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 5px;
-        background-size: 39px 39px;
+        background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 7px;
+        background-size: 35px 35px;
       }
     }
     ul:first-of-type {
@@ -138,14 +141,15 @@
     }
 
     #about-item,
+    #projects-item,
     #blog-item,
     #events-item,
     #search-item { display:block; }
 
     #about-item,
-    #events-item { text-align: left; }
+    #projects-item { text-align: left; }
 
-    #blog-item,
+    #events-item,
     #search-item { text-align: right; }
 
     #home-item {
@@ -153,8 +157,8 @@
       width: 20%;
       text-align: center;
       a {
-        min-height: 48px;
-        background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 12px;
+        min-height: 49px;
+        background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 10px;
         background-size: 39px 39px;
       }
 
@@ -182,6 +186,7 @@
 
   .subnav-sticky .subnav {
     padding-top: 1em;
+    transition:  .2s;
   }
 
   .about-nav .menu-item {
@@ -190,7 +195,7 @@
   }
   .projects-nav .menu-item {
     margin: 0;
-    width: 24%;
+    width: 19%;
   }
 }
 
@@ -204,7 +209,7 @@
 
   .projects-nav .menu-item {
     margin: 0;
-    width: 24%;
+    width: 19%;
   }
 
 }

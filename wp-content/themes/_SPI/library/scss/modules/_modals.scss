@@ -9,7 +9,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  padding-top: 32px;
+  padding-top: 15px;
   background-color: $blue;
   background-color: rgba($blue, 0.85);
   a,
@@ -90,5 +90,11 @@
   }
   .secondary-btn {
     @extend %transparent-btn-on-blue;
+  }
+}
+
+@media only screen and (min-width: 768px) { /* Tablets, smaller laptops */
+  %modal {
+    padding-top: 25px;
   }
 }

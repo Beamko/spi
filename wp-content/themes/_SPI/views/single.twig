@@ -9,7 +9,7 @@
                     <h1 class="page-title large-7 column large-centered small-centered">{{ post.title }}</h1>
                     <h4>{{ post.author.name }}</h4>
                     <h5>{{ post.post_date|date}}</h5>
-                </header>   
+                </header>
 
 
                 <div class="article-body">
@@ -22,7 +22,7 @@
                     <ul>
                         {% for footnote in post.get_field('footnotes') %}
                             <li><span><strong>{{ footnote.number }}.</strong></span> {{ footnote.footnote_text }}</li>
-                        {% endfor %}      
+                        {% endfor %}
                     </ul>
                 </section>
             {% endif %}
@@ -38,7 +38,7 @@
             {% endif %}
 
 
-            <section class="comments">
+            {#<section class="comments">
                 {% if post.get_comments() %}
                 <div class="post-section responses">
                     <h3 class="h2">{{ comment_count }} {% if comment_count == 1 %}Comment{% else %}Comments{% endif %} </h3>
@@ -54,7 +54,7 @@
                 </div>
 
 
-            </section>
+            </section>#}
 
         </article>
     </div> <!-- /content-wrapper -->

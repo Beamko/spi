@@ -61,6 +61,7 @@
     margin-left: auto;
 		span {
 			@extend %tag;
+			background-color: $page;
 		}
 	}
 }

@@ -2,6 +2,10 @@
 -------------------------------------------------------------
   L I B R A R Y
 ------------------------------------------------------------- */
+.library-intro-section p {
+	text-indent: 0 !important;
+}
+
 .resource-section {
 	h2 {
 		margin-bottom: 1.4em;
@@ -24,12 +28,11 @@
 		clear: both;
 		display: block;
 		float: left;
-		line-height: 25px;
+		line-height: 1.1em;
+		text-decoration: none;
 	}
+	a:hover, a:focus {text-decoration: underline;}
 	i {
 		margin: 9px 4px 0 0;
-	}
-	a {
-		text-decoration: none;
 	}
 }
