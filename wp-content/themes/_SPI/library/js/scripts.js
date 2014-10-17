@@ -161,7 +161,7 @@ jQuery(document).ready(function($) {
   spi.mobileMenus = function () {
     $('.js-open-mobile-menu').click(function (e) {
       e.preventDefault();
-      //_gaq.push(['_trackEvent', 'mobile-nav', 'toggle']);
+      _gaq.push(['_trackEvent', 'mobile-nav', 'toggle']);
       $('.js-mobile-menu').slideToggle('fast');
     });
 
@@ -216,7 +216,7 @@ jQuery(document).ready(function($) {
   spi.newsletterSignup = function () {
     $('.js-open-newsletter-modal').click(function (e) {
       e.preventDefault();
-      // _gaq.push(['_trackEvent', 'footer', 'open-newsletter-sign-up']);
+      _gaq.push(['_trackEvent', 'footer', 'open-newsletter-sign-up']);
 
       $('.js-newsletter-form').slideToggle('fast');
 
@@ -224,7 +224,7 @@ jQuery(document).ready(function($) {
 
     $('.js-submit-newsletter').on('click', function (e) {
       e.preventDefault();
-      // _gaq.push(['_trackEvent', 'footer', 'newsletter-sign-up']);
+      _gaq.push(['_trackEvent', 'modal', 'newsletter-sign-up']);
 
       var form = $('#mc-embedded-subscribe-form');
       var formEmail = form.find('#mce-EMAIL');
@@ -257,7 +257,7 @@ jQuery(document).ready(function($) {
   spi.searchSite = function () {
     $('.js-open-search').click(function (e) {
       e.preventDefault();
-      //_gaq.push(['_trackEvent', 'mobile-nav', 'toggle']);
+      _gaq.push(['_trackEvent', 'search', 'show']);
 
       $('.js-search-modal').slideToggle('fast');
     });
@@ -272,7 +272,7 @@ jQuery(document).ready(function($) {
 	spi.blogCategories = function () {
     $('.js-open-cats').click(function (e) {
       e.preventDefault();
-      //_gaq.push(['_trackEvent', 'mobile-nav', 'toggle']);
+      _gaq.push(['_trackEvent', 'mobile-nav', 'toggle']);
       var $modalContents = $('.blog-cats-modal');
       $('#js-blog-modals').html($modalContents);
 
