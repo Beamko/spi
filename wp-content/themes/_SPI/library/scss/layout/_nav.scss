@@ -112,6 +112,7 @@
       #home-item a {
         background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 5px;
         background-size: 39px 39px;
+        margin: -1px;
       }
     }
     ul:first-of-type {
@@ -153,9 +154,10 @@
       width: 20%;
       text-align: center;
       a {
-        min-height: 48px;
+        min-height: 49px;
         background: transparent url('http://kodit.co/img/spi-logo.gif') no-repeat center 12px;
         background-size: 39px 39px;
+        margin: -1px;
       }
 
     }
@@ -190,7 +192,7 @@
   }
   .projects-nav .menu-item {
     margin: 0;
-    width: 24%;
+    width: 19%;
   }
 }
 
@@ -204,7 +206,7 @@
 
   .projects-nav .menu-item {
     margin: 0;
-    width: 24%;
+    width: 19%;
   }
 
 }
