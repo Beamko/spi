@@ -139,14 +139,15 @@
     }
 
     #about-item,
+    #projects-item,
     #blog-item,
     #events-item,
     #search-item { display:block; }
 
     #about-item,
-    #events-item { text-align: left; }
+    #projects-item { text-align: left; }
 
-    #blog-item,
+    #events-item,
     #search-item { text-align: right; }
 
     #home-item {
