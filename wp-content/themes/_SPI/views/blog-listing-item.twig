@@ -5,15 +5,26 @@
 
         <h2 class="h5 entry-title"><a href="{{post.get_path}}" rel="bookmark" title="{{post.post_title}}">{{post.post_title}}</a></h2>
 
-        <p class="author">{{post.author}}</p>
+        {#<p class="author">{{post.author}}</p>#}
+
+        {% if post.get_field('author') %}
+          <p class="author">{{post.get_field('author')}}</p>
+        {% endif %}
 
         {% if post.get_field('featured_image') %}
+          <a href="{{post.get_path}}" rel="bookmark" title="{{post.post_title}}">
             <img src="{{post.get_field('featured_image')}}" alt="post image">
+          </a>
         {% endif %}
 
 
         <section class="cf post-summary">
-            <p>{{post.get_field('blog_content')|length > 350 ? post.get_field('blog_content')|striptags|slice(0, 350) ~ '...' : post.get_field('blog_content')}}</p>
+            <p>
+            {{post.content|length > 350 ? post.content|striptags|slice(0, 350) ~ '...' : post.content}}
+            {% if post.content %}
+              <a href="{{post.get_path}}" rel="bookmark" title="{{post.post_title}}"><em>read more</em></a>
+            {% endif %}
+            </p>
         </section>
 
         {% for category in post.terms('category') %}
