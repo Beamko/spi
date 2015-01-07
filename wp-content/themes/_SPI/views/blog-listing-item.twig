@@ -19,12 +19,14 @@
 
 
         <section class="cf post-summary">
+
+          {% if post.get_field('teaser_text') %}
             <p>
-            {{post.content|length > 350 ? post.content|striptags|slice(0, 350) ~ '...' : post.content}}
-            {% if post.content %}
-              <a href="{{post.get_path}}" rel="bookmark" title="{{post.post_title}}"><em>read more</em></a>
-            {% endif %}
+            {{post.get_field('teaser_text')}}
+            <a href="{{post.get_path}}" rel="bookmark" title="{{post.post_title}}"><em>read more</em></a>
             </p>
+          {% endif %}
+
         </section>
 
         {% for category in post.terms('category') %}
