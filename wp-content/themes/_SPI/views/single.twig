@@ -6,14 +6,24 @@
         <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
             <section class="article-content">
                 <header class="blog-header row">
+
+                    {#<a class="menu-item" href="{{site.url}}/blog">back to the desk</a>#}
+
                     <h1 class="page-title large-7 column large-centered small-centered">{{ post.title }}</h1>
-                    <h4>{{ post.author.name }}</h4>
+
+                    {#<h4>{{ post.author.name }}</h4>#}
+
+                    {% if post.get_field('author') %}
+                    <h4>{{post.get_field('author')}}</h4>
+                    {% endif %}
+
                     <h5>{{ post.post_date|date}}</h5>
+
                 </header>
 
 
                 <div class="article-body">
-                    {{ post.get_field('blog_content') }}
+                    {{post.content}}
                 </div>
             </section>
 
