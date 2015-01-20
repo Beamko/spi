@@ -29,11 +29,13 @@
 
         </section>
 
+        <section class="cf post-tags">
         {% for category in post.terms('category') %}
             {% if category.name != 'Uncategorized' %}
                 <a href="{{category.link}}" class="category-tag">{{ category.name }}</a>
             {% endif %}
         {% endfor %}
+        </section>
 
     </article>
 </div>

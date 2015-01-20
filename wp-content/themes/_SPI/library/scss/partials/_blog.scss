@@ -2,6 +2,8 @@
 -------------------------------------------------------------
 	B L O G   L I S T I N G   P A G E
 ------------------------------------------------------------- */
+h2.blog-list-title {padding-bottom: .75em;}
+
 .blog-list-item {
 	.h5 {
 		margin: 0 0 .07em;
@@ -35,6 +37,10 @@
 
 .post-summary p {
 	@include hyphenate;
+}
+
+.post-tags {
+	margin-top: 16px;
 }
 
 /* Hide footnotes from archive page */
@@ -85,6 +91,10 @@
 	}
 }
 
+.article-body img {
+	margin-bottom: 26px;
+}
+
 /* Categories */
 .category-tags {
 	margin-bottom: 3em;
@@ -122,7 +132,7 @@
 			margin: 0 auto .07em;
 		}
 		img {
-			margin-bottom: 25px;
+			//margin-bottom: 25px;
 		}
 	}
 
