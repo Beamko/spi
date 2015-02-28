@@ -2,7 +2,9 @@
 
 {% block content %}
 
+<a href="{{featured_item.guid}}">
 <div class="feature-block hide-for-small" style="background-image: url('{{TimberImage(post.get_field('cover_image')).src}}');">
+    <!--
     <div class="feature-info">
       <h5>{{post.feature_info}}</h5>
       <h1><a href="{{featured_item.guid}}">{{featured_item.post_title}}</a></h1>
@@ -10,7 +12,9 @@
       	<h6>{{author_name}}</h6>
       {% endif %}
     </div>
+  -->
 </div>
+</a>
 
 <div class="feature-block show-for-small">
     <div class="feature-info">
